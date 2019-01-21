@@ -1,0 +1,16 @@
+.PodcastPage{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .playerContainer {
+    display: flex;
+    width: 50vh;
+    height: 50vh;
+    background-color: $clr_highlight;
+    align-items: center;
+    justify-content: center;
+  }
+}
