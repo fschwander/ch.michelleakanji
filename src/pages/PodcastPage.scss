@@ -1,4 +1,4 @@
-.PodcastPage{
+.PodcastPage {
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -41,6 +41,9 @@
         background-color: $clr_white_transparent;
         .progress-bar {
           background-color: $clr_highlight_transparent;
+          background-image: none;
+          background-repeat: unset;
+          box-shadow: unset;
         }
       }
 
@@ -48,6 +51,12 @@
         min-height: 8px;
         max-height: 12px;
         height: 1vmin;
+      }
+
+      progress {
+        background-image: none;
+        border-radius: unset;
+        background-repeat: unset;
       }
 
       input {
@@ -59,6 +68,37 @@
       font-size: $font_size_normal;
       padding-top: 0.5em;
       align-self: flex-start;
+    }
+  }
+
+  .popUpContainer {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 400px;
+    min-height: 550px;
+    padding: 3vh 5vw;
+    background-color: $clr_highlight_transparent;
+
+    .carousel {
+      .carousel-indicators {
+        li {
+          width: 1em;
+          height: 1em;
+          margin: 0 0.5em;
+        }
+      }
+    }
+
+    .carousel-inner {
+      .item {
+        padding-top: 10vh;
+
+        & > * {
+          padding-bottom: 1em;
+        }
+      }
     }
   }
 }

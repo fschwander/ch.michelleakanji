@@ -4,7 +4,7 @@ import audioFile from '../res/audios/vaterland.ogg';
 import ReactPlayer from "react-player";
 import playIcon from '../res/icons/play.svg';
 import pauseIcon from '../res/icons/pause.svg';
-import { ProgressBar } from "react-bootstrap";
+import { Carousel, ProgressBar } from "react-bootstrap";
 import Duration from "../utils/Duration";
 
 export default class PodcastPage extends React.Component {
@@ -13,11 +13,18 @@ export default class PodcastPage extends React.Component {
     this.state = {
       isPlaying: false,
       played: 0,
-      duration: 0
+      duration: 0,
+      index: 0,
+      direction: null
     };
+    this.sizes = {
+      popUpWidth: 400,
+      popUpHeight: 600
+    }
 
     this.play = this.play.bind(this);
     this.pause = this.pause.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   render() {
@@ -59,8 +66,63 @@ export default class PodcastPage extends React.Component {
           </div>
           <Duration seconds={ this.state.played * this.state.duration }/>
         </div>
+
+        { this.initPopUpContainer() }
       </div>
     )
+  }
+
+  initPopUpContainer() {
+    return (
+      <div className='popUpContainer'>
+        <Carousel activeIndex={ this.state.index }
+                  direction={ this.state.direction }
+                  onSelect={ this.handleSelect }
+                  controls={ false }>
+          <Carousel.Item>
+              <h3>Vaterland</h3>
+              <p>Audiofeature von Michelle Akanji</p>
+              <p>
+                Vaterland ist ein 45-minütiges Audiofeature, das eine persönliche Geschichte erzählt. Eine Tochter
+                stellt sich dem fremd-vertrauten Verhältnis zu ihrem Vater, der zwar im selben Land, doch in einer
+                anderen Gegenwart lebt. Während er sich in der Schweizer Leistungsgesellschaft verliert, findet sie
+                sich
+                in ihrer Rolle als Erstgeborene nicht zurecht. Und als die beiden endlich wieder eine gemeinsame
+                Sprache
+                finden, nimmt das Leben eine neue Wendung.
+              </p>
+              <p>
+                Bitte mit Kopfhörern hören.
+              </p>
+          </Carousel.Item>
+
+          <Carousel.Item>
+              <h3>
+                Impressum
+              </h3>
+              <p>
+                Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education Kulturpublizistik an der Zürcher Hochschule der Künste.
+              </p>
+              <p>
+                Autorin: Michelle Akanji<br/>Mentor: Claudio Bucher<br/>Webdesign: Fabian Schwander<br/>Mastering: Flo
+                Schär
+              </p>
+
+              <p>
+                &copy; 2018 Michelle Akanji
+              </p>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+    )
+  }
+
+  handleSelect(selectedIndex, e) {
+    // alert(`selected=${selectedIndex}, direction=${e.direction}`);
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction
+    });
   }
 
   ref = player => this.player = player;
