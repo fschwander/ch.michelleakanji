@@ -1,4 +1,5 @@
 .PodcastPage {
+  position: fixed;
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -9,10 +10,13 @@
     padding-top: 1vh;
     display: flex;
     flex-direction: column;
-    width: 50vh;
+    width: 90vw;
+    max-width: 700px;
     height: 50vh;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    transition: 1s ease-in-out;
 
     .button {
       max-width: 280px;
@@ -48,12 +52,12 @@
       }
 
       .progress, .progress-bar {
-        min-height: 8px;
+        min-height: 10px;
         max-height: 12px;
-        height: 1vmin;
+        height: 1vmax;
       }
 
-      progress {
+      .progress {
         background-image: none;
         border-radius: unset;
         background-repeat: unset;
@@ -76,9 +80,12 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    width: 400px;
+    justify-content: center;
+    max-width: 400px;
+    width: 90vw;
     min-height: 550px;
     padding: 3vh 5vw;
+    transition: 1s ease-in-out;
     background-color: $clr_highlight_transparent;
 
     .carousel {
@@ -94,10 +101,58 @@
     .carousel-inner {
       .item {
         padding-top: 10vh;
+        height: 400px;
 
         & > * {
           padding-bottom: 1em;
         }
+      }
+    }
+  }
+
+  .disclaimer-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease-in-out 0.5s;
+    &.collapse {
+      opacity: 0;
+    }
+    &.top {
+      top: -17px;
+      height: 2em;
+    }
+
+    .arrow-button {
+      margin: auto;
+      width: 0;
+      border-left: 4vmax solid transparent;
+      border-right: 4vmax solid transparent;
+    }
+
+    .arrow-down {
+      border-bottom: 4vmax solid $clr_highlight_transparent;
+    }
+
+    .arrow-up {
+      border-top: 4vmax solid $clr_highlight_transparent;
+    }
+
+    @media screen and (min-width: 1000px) {
+      .arrow-button {
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+      }
+
+      .arrow-down {
+        border-bottom: 40px solid $clr_highlight_transparent;
+      }
+
+      .arrow-up {
+        border-top: 40px solid $clr_highlight_transparent;
       }
     }
   }

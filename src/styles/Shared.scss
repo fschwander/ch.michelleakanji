@@ -27,4 +27,11 @@
     margin: 0;
   }
 
+  .hide-top {
+    transform: translateY(-100vh);
+  }
+
+  .hide-bottom {
+    transform: translateY(100vh);
+  }
 }

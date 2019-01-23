@@ -14,6 +14,7 @@ export default class PodcastPage extends React.Component {
       isPlaying: false,
       played: 0,
       duration: 0,
+      showDisclaimerContainer: false,
       index: 0,
       direction: null
     };
@@ -25,6 +26,7 @@ export default class PodcastPage extends React.Component {
     this.play = this.play.bind(this);
     this.pause = this.pause.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.toggleDisclaimerContainer = this.toggleDisclaimerContainer.bind(this)
   }
 
   render() {
@@ -35,7 +37,7 @@ export default class PodcastPage extends React.Component {
              backgroundSize: 'cover'
            } }>
 
-        <div className='playerContainer'>
+        <div className={'playerContainer ' + (this.state.showDisclaimerContainer ? 'hide-top':'')}>
           <ReactPlayer
             ref={ this.ref }
             className='player'
@@ -67,18 +69,36 @@ export default class PodcastPage extends React.Component {
           <Duration seconds={ this.state.played * this.state.duration }/>
         </div>
 
-        { this.initPopUpContainer() }
+        <div className={"disclaimer-button" + (this.state.showDisclaimerContainer ? ' collapse':'')}
+             onClick={() => this.toggleDisclaimerContainer()}>
+          <div className="arrow-text">
+            <p>click me</p>
+          </div>
+          <div className="arrow-button arrow-down "/>
+        </div>
+
+        { this.initPopUpContainer()}
       </div>
     )
   }
 
   initPopUpContainer() {
     return (
-      <div className='popUpContainer'>
+      <div className={'popUpContainer'+ (!this.state.showDisclaimerContainer ? ' hide-bottom':'')}>
+
+        <div className={"disclaimer-button top" + (this.state.showDisclaimerContainer ? '':' collapse')}
+             onClick={() => this.toggleDisclaimerContainer()}>
+          <div className="arrow-text">
+            <p>click me</p>
+          </div>
+          <div className="arrow-button arrow-up "/>
+        </div>
+
         <Carousel activeIndex={ this.state.index }
                   direction={ this.state.direction }
                   onSelect={ this.handleSelect }
                   controls={ false }>
+
           <Carousel.Item>
               <h3>Vaterland</h3>
               <p>Audiofeature von Michelle Akanji</p>
@@ -118,7 +138,6 @@ export default class PodcastPage extends React.Component {
   }
 
   handleSelect(selectedIndex, e) {
-    // alert(`selected=${selectedIndex}, direction=${e.direction}`);
     this.setState({
       index: selectedIndex,
       direction: e.direction
@@ -126,6 +145,10 @@ export default class PodcastPage extends React.Component {
   }
 
   ref = player => this.player = player;
+
+  toggleDisclaimerContainer() {
+    this.setState({showDisclaimerContainer: !this.state.showDisclaimerContainer})
+  }
 
   play() {
     this.setState({ isPlaying: true });
@@ -152,7 +175,7 @@ export default class PodcastPage extends React.Component {
   onSeekMouseUp = e => {
     this.setState({ seeking: false });
     this.player.seekTo(parseFloat(e.target.value))
-  }
+  };
 
   onDuration = (duration) => {
     this.setState({ duration })
