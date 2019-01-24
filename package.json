@@ -2,6 +2,7 @@
   "name": "michelleakanji.ch",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.michelleakanji.ch",
   "dependencies": {
     "node-sass": "^4.11.0",
     "prettier": "^1.16.0",

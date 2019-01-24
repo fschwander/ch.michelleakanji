@@ -27,6 +27,10 @@
     margin: 0;
   }
 
+  .radial-background {
+    background-image: radial-gradient(#0001, transparent);
+  }
+
   .hide-top {
     transform: translateY(-100vh);
   }

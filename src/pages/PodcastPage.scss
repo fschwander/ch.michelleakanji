@@ -7,12 +7,12 @@
   align-items: center;
 
   .playerContainer {
-    padding-top: 1vh;
+    padding-top: 7vh;
     display: flex;
     flex-direction: column;
     width: 90vw;
     max-width: 700px;
-    height: 50vh;
+    height: 60vh;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -21,8 +21,8 @@
     .button {
       max-width: 280px;
       max-height: 280px;
-      width: 25vmax;
-      height: 25vmax;
+      //width: 25vmax;
+      height: 30vh;
       outline: none;
       transition: 1s ease-in-out;
     }
@@ -36,7 +36,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      padding-top: 4vh;
+      padding-top: 6vh;
 
       input, .progress {
         margin: 0;
@@ -52,8 +52,8 @@
       }
 
       .progress, .progress-bar {
-        min-height: 10px;
-        max-height: 12px;
+        min-height: 12px;
+        max-height: 16px;
         height: 1vmax;
       }
 
@@ -83,8 +83,8 @@
     justify-content: center;
     max-width: 400px;
     width: 90vw;
-    min-height: 550px;
-    padding: 3vh 5vw;
+    max-height: 80vh;
+    padding: 5vh 5vw;
     transition: 1s ease-in-out;
     background-color: $clr_highlight_transparent;
 
@@ -94,13 +94,14 @@
           width: 1em;
           height: 1em;
           margin: 0 0.5em;
+          bottom: 0;
         }
       }
     }
 
     .carousel-inner {
       .item {
-        padding-top: 10vh;
+        padding: 5vh 0;
         height: 400px;
 
         & > * {
