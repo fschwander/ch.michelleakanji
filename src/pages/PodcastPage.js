@@ -99,10 +99,8 @@ export default class PodcastPage extends React.Component {
               Vaterland ist ein 45-minütiges Audiofeature, das eine persönliche Geschichte erzählt. Eine Tochter
               stellt sich dem fremd-vertrauten Verhältnis zu ihrem Vater, der zwar im selben Land, doch in einer
               anderen Gegenwart lebt. Während er sich in der Schweizer Leistungsgesellschaft verliert, findet sie
-              sich
-              in ihrer Rolle als Erstgeborene nicht zurecht. Und als die beiden endlich wieder eine gemeinsame
-              Sprache
-              finden, nimmt das Leben eine neue Wendung.
+              sich in ihrer Rolle als Erstgeborene nicht zurecht. Und als die beiden endlich wieder eine gemeinsame
+              Sprache finden, nimmt das Leben eine neue Wendung.
             </p>
             <p>
               Bitte mit Kopfhörern hören.
