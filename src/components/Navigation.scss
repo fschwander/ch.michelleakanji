@@ -1,10 +1,13 @@
 #Navigation {
-  position: absolute;
+  //position: absolute;
   border-color: transparent;
   background-color: transparent;
 
   .container {
     width: 90%;
+    &:after {
+      position: relative;
+    }
 
     .navbar-collapse {
       border-color: transparent;
@@ -35,7 +38,7 @@
     }
 
     a {
-      color: white;
+      color: $clr_black;
     }
 
     .navbar-toggle {
@@ -43,7 +46,7 @@
       background-color: transparent;
       span {
         border-radius: 0;
-        background-color: $clr_white;
+        background-color: $clr_black;
         transition: ease-in-out 0.2s;
       }
       span:nth-child(1) {

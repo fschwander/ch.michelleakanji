@@ -6,16 +6,17 @@
 @import "../components/Navigation";
 
 .App {
+  padding-top: 50px;
+
   * {
     font-family: Avenir, Helvetica, Futura, Tahoma, sans-serif;
     line-height: 1.4;
-    color: $clr_white;
+    color: $clr_black;
   }
 
   h1 {
     font-weight: bold;
     font-size: 5vmax;
-    color: $clr_white;
     line-height: 100%;
     margin: 0;
     text-align: justify;

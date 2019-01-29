@@ -4,12 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $clr_black;
 
   a {
-    color: $clr_white;
     text-decoration: none;
     position: relative;
+    color: $clr_black;
 
     &:after {
       content: '';
