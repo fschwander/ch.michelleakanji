@@ -14,14 +14,22 @@
       a {
         background-color: transparent;
 
-        &:after {
-          content: '';
-          width: 90%;
-          left: 5%;
-          position: absolute;
-          bottom: -2px;
-          border-width: 0 0 2px;
-          border-style: solid;
+        @media screen and (min-width: 768px) {
+          &:after {
+            content: '';
+            width: 90%;
+            left: 5%;
+            position: absolute;
+            bottom: -2px;
+            border-width: 0 0 2px;
+            border-style: solid;
+          }
+        }
+
+        @media screen and (max-width: 768px){
+          & {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -33,35 +41,31 @@
     .navbar-toggle {
       border-color: transparent;
       background-color: transparent;
-
       span {
+        border-radius: 0;
         background-color: $clr_white;
         transition: ease-in-out 0.2s;
       }
-
       span:nth-child(1) {
         top: 0;
         transform-origin: left center;
       }
-
       span:nth-child(2) {
         top: 18px;
         transform-origin: left center;
       }
-
       span:nth-child(3) {
         top: 36px;
         transform-origin: left center;
       }
-
       &:hover span:nth-child(2) {
         transform: rotate(45deg);
       }
-
       &:hover span:nth-child(3) {
+        transform: translate(4.5px, 100%);
         width: 0;
-        opacity: 0;
-        transition: ease-in-out 0.1s;
+        //opacity: 0;
+        transition: ease-in-out 0.6s;
       }
       &:hover span:nth-child(4) {
         transform: translate(-2.5px, -4.5px) rotate(-45deg);
