@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://www.michelleakanji.ch",
   "dependencies": {
+    "history": "^4.7.2",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.0",
     "react": "^16.7.0",

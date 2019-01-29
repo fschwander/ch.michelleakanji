@@ -1,6 +1,9 @@
 @import "Variables";
 // pages
-@import "../pages/PodcastPage";
+@import "../pages/AudioFeaturePage";
+@import "../pages/ContactPage";
+// components
+@import "../components/Navigation";
 
 .App {
   * {

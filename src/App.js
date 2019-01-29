@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/Shared.scss';
-import PodcastPage from "./pages/PodcastPage";
+import Navigation from "./components/Navigation";
 
-class App extends Component {
-  render() {
+export default function App({ children }) {
     return (
       <div className="App">
-        <PodcastPage/>
+        <Navigation/>
+        <div>{children}</div>
       </div>
     );
-  }
 }
-
-export default App;

@@ -1,0 +1,30 @@
+.ContactPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr_black;
+
+  a {
+    color: $clr_white;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-width: 0 0 1px;
+      border-style: solid;
+    }
+
+    &:hover {
+      &:after {
+        bottom: -2px;
+      }
+    }
+  }
+}

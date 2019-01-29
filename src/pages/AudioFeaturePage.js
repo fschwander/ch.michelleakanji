@@ -7,7 +7,7 @@ import pauseIcon from '../res/icons/pause.svg';
 import { Carousel, ProgressBar } from "react-bootstrap";
 import Duration from "../utils/Duration";
 
-export default class PodcastPage extends React.Component {
+export default class AudioFeaturePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,16 +21,16 @@ export default class PodcastPage extends React.Component {
     this.sizes = {
       popUpWidth: 400,
       popUpHeight: 600
-    }
+    };
 
     this.togglePlayPause = this.togglePlayPause.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
-    this.toggleDisclaimerContainer = this.toggleDisclaimerContainer.bind(this)
+    this.toggleDisclaimerContainer = this.toggleDisclaimerContainer.bind(this);
   }
 
   render() {
     return (
-      <div className='PodcastPage '
+      <div className='AudioFeaturePage '
            style={ {
              background: 'url(' + backgroundImage + ') center center fixed',
              backgroundSize: 'cover'
