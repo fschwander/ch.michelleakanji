@@ -6,7 +6,7 @@ export default class ContactPage extends React.Component {
     return (
       <div className='ContactPage'>
         <div className='center-container'>
-          <div>Michelle Akanji</div>
+          <h2>Michelle Akanji</h2>
           <a href='mailto:kontakt@michelleakanji.ch'>kontakt@michelleakanji.ch</a>
         </div>
       </div>

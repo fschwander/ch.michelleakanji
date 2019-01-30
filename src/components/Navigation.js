@@ -11,16 +11,16 @@ export default class Navigation extends React.Component {
           <Navbar id="Navigation" collapseOnSelect fixedTop>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to={ `/` }>Michelle Akanji</Link>
+                <Link to={ '/' }>Michelle Akanji</Link>
               </Navbar.Brand>
               <Navbar.Toggle/>
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav pullRight>
-                <LinkContainer to={ `/works` }>
+                <LinkContainer to={ '/works' }>
                   <NavItem eventKey={ 0 }>Werke</NavItem>
                 </LinkContainer>
-                <LinkContainer to={ `/contact` }>
+                <LinkContainer to={ '/contact' }>
                   <NavItem eventKey={ 1 }>Kontakt</NavItem>
                 </LinkContainer>
               </Nav>
