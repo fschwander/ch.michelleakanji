@@ -1,18 +1,12 @@
 import React from 'react';
-import { Link, Route, Router, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { createBrowserHistory } from 'history';
-import ContactPage from "../pages/ContactPage";
-import WorksPage from "../pages/WorksPage";
-import HomePage from "../pages/HomePage";
 
 export default class Navigation extends React.Component {
   render() {
-    const history = createBrowserHistory();
 
     return (
-      <Router history={ history }>
         <div>
           <Navbar id="Navigation" collapseOnSelect fixedTop>
             <Navbar.Header>
@@ -32,14 +26,7 @@ export default class Navigation extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
-          <Switch>
-            <Route exact path={ `/` } component={ HomePage }/>
-            <Route path={ `/works` } component={ WorksPage }/>
-            <Route path={ `/contact` } component={ ContactPage }/>
-          </Switch>
         </div>
-      </Router>
     );
   }
 
