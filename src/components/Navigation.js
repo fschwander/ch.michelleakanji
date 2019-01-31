@@ -4,8 +4,8 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 export default class Navigation extends React.Component {
-  render() {
 
+  render() {
     return (
       <Navbar id="Navigation" collapseOnSelect fixedTop>
         <Navbar.Header>

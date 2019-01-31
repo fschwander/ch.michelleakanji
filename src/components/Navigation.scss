@@ -5,7 +5,7 @@
   .container {
 
     .navbar-collapse {
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 768px) {
         border: 1px solid;
         border-left: unset;
         border-right: unset;
@@ -28,7 +28,7 @@
           }
         }
 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 768px) {
           & {
             text-decoration: underline;
           }
@@ -43,6 +43,7 @@
     .navbar-toggle {
       border-color: transparent;
       background-color: transparent;
+
       span {
         border-radius: 0;
         background-color: $clr_black;
@@ -60,18 +61,22 @@
         top: 36px;
         transform-origin: left center;
       }
-      &:hover span:nth-child(2) {
-        transform: rotate(45deg);
+
+      &:not(.collapsed) {
+        span:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        span:nth-child(3) {
+          transform: translate(4.5px, 100%);
+          width: 0;
+          opacity: 0;
+          transition: ease-in-out 0.1s;
+        }
+        span:nth-child(4) {
+          transform: translate(-2.5px, -4.5px) rotate(-45deg);
+        }
       }
-      &:hover span:nth-child(3) {
-        transform: translate(4.5px, 100%);
-        width: 0;
-        opacity: 0;
-        transition: ease-in-out 0.1s;
-      }
-      &:hover span:nth-child(4) {
-        transform: translate(-2.5px, -4.5px) rotate(-45deg);
-      }
+
     }
   }
 }
