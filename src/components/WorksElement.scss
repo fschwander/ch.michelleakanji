@@ -1,0 +1,35 @@
+.works-element {
+  position: relative;
+  height: 35vw;
+  min-height: 358px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+
+  .random-h-pos-container {
+    padding: 6px;
+
+    &:hover {
+      background-color: $clr_highlight_pale;
+    }
+
+    @media screen and (min-width: 768px){
+      position: absolute;
+      width: 30vw;
+      max-width: 300px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    h2 {
+      margin: 8px 0 2px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
