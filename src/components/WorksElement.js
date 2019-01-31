@@ -6,7 +6,7 @@ export default class WorksElement extends React.Component {
 
   render() {
     return (
-      <div className='works-element'>
+      <div className='WorksElement'>
         <div className='random-h-pos-container' style={{left: this.props.left + '%'}}>
           <Image src={imgSolange}/>
           <h2>{ this.props.title }</h2>

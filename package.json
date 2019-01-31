@@ -2,7 +2,7 @@
   "name": "michelleakanji.ch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.michelleakanji.ch",
+  "homepage": "http://www.twigo.ch/_test/michelleakanji-react2",
   "dependencies": {
     "history": "^4.7.2",
     "node-sass": "^4.11.0",

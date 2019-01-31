@@ -16,9 +16,9 @@ export default function App({ children }) {
         <Navigation/>
         <Layout children={ children }>
           <Switch>
+            <Route exact path={ '/'} render={ () => <Redirect to={'/works'}/> }/>
             <Route path={ '/works' } component={ WorksPage }/>
             <Route path={ '/contact' } component={ ContactPage }/>
-            <Route path={ '/'} render={ () => <Redirect to={'/works'}/> }/>
           </Switch>
         </Layout>
       </div>
