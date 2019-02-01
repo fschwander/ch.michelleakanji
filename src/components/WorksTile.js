@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "react-bootstrap";
 import imgSolange from "../res/imgs/solange.png"
 
-export default class WorksElement extends React.Component {
+export default class WorksTile extends React.Component {
 
   render() {
     return (

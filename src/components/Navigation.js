@@ -10,7 +10,7 @@ export default class Navigation extends React.Component {
       <Navbar id="Navigation" collapseOnSelect fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to={ '/' }>Michelle Akanji</Link>
+            <Link to={ '/works' }>Michelle Akanji</Link>
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>

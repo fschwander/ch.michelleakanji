@@ -1,2 +1,8 @@
-.WorksPage{
+.WorksPage {
+  .WorksElement {
+    .random-h-pos-container {
+      transition: 1s ease-in-out;
+      transition-delay: 0.2s;
+    }
+  }
 }

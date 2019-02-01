@@ -1,5 +1,5 @@
 import * as React from "react";
-import WorksElement from "../components/WorksElement";
+import WorksElement from "../components/WorksTile";
 
 export default class WorksPage extends React.Component {
 
