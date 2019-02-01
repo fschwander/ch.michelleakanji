@@ -1,27 +1,44 @@
 .ContactPage {
-  height: 80vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  a {
-    text-decoration: none;
-    position: relative;
-    color: $clr_black;
+  .center-container {
+    display: flex;
+    flex-direction: column;
 
-    &:after {
-      content: '';
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      border-width: 0 0 1px;
-      border-style: solid;
+    h2 {
+      margin: 0 0 0.5em;
     }
 
-    &:hover {
+    .link {
+      text-decoration: none;
+      position: relative;
+      color: $clr_black;
+
       &:after {
-        bottom: -2px;
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -0px;
+        border-width: 0 0 1px;
+        border-style: solid;
+      }
+
+      &:hover {
+        &:after {
+          bottom: -2px;
+        }
+      }
+    }
+
+    .icon {
+      margin-top: 1em;
+      align-self: center;
+      img {
+        width: 28px;
       }
     }
   }
