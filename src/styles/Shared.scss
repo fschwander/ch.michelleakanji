@@ -6,6 +6,8 @@
 @import "../components/Layout";
 @import "../components/Navigation";
 @import "../components/WorksTile";
+// works
+@import "../works/works-page";
 
 .App {
   * {
@@ -18,7 +20,6 @@
     font-weight: bold;
     font-size: 5vmax;
     line-height: 100%;
-    margin: 0;
     text-align: justify;
   }
 
@@ -27,23 +28,9 @@
   }
 
   h3 {
-    margin: 0;
   }
 
   p {
-    font-size: 0.9em;
-    margin: 0;
-  }
 
-  .radial-background {
-    background-image: radial-gradient(#0001, transparent);
-  }
-
-  .hide-top {
-    transform: translateY(-100vh);
-  }
-
-  .hide-bottom {
-    transform: translateY(100vh);
   }
 }

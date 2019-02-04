@@ -1,5 +1,9 @@
 import * as React from "react";
-import WorksElement from "../components/WorksTile";
+import WorksTile from "../components/WorksTile";
+
+import imgSolange from "../res/imgs/solange.png"
+import imgVaterland from "../res/imgs/vaterland.jpg"
+
 
 export default class WorksPage extends React.Component {
 
@@ -7,26 +11,49 @@ export default class WorksPage extends React.Component {
     return [
       {
         title: 'Vaterland',
-        description: 'Audiofeature'
+        description: 'Audiofeature',
+        image: imgVaterland,
+        link: 'vaterland'
       },
       {
-        title: 'Brudi',
-        description: 'Text&Bild'
+        title: 'Heimat schreiben',
+        description: 'Essay',
+        image: imgSolange,
+        link: 'heimat-schreiben'
+      },
+      {
+        title: 'Protest-Selfie',
+        description: 'Reportage',
+        image: imgSolange,
+        link: 'protest-selfie'
+      },
+      {
+        title: 'Der Wert der Wahrheit',
+        description: '',
+        image: imgSolange,
+        link: 'der-wert-der-wahrheit'
+      },
+      {
+        title: 'Schlimmstenfalls eine Utopie',
+        description: '',
+        image: imgSolange,
+        link: 'schlimmstenfalls-eine-utopie'
       }
     ]
   }
 
-  getAllWorksElements() {
+  getAllWorksTiles() {
     const elementsList = this.getElementsList();
 
     return elementsList.map(
       e =>
-        <WorksElement
+        <WorksTile
           title={ e.title }
           description={ e.description }
           key={ e.title }
           left={ this.getRandomHPos() }
-        />
+          image={ e.image }
+          link={ e.link }/>
     )
   }
 
@@ -38,7 +65,7 @@ export default class WorksPage extends React.Component {
   render() {
     return (
       <div className='WorksPage'>
-        { this.getAllWorksElements() }
+        { this.getAllWorksTiles() }
       </div>
     )
   }

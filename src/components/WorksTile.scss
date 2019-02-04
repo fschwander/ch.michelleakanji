@@ -1,4 +1,4 @@
-.WorksElement {
+.WorksTile {
   position: relative;
   height: 35vw;
   min-height: 358px;
@@ -11,6 +11,7 @@
 
     &:hover {
       background-color: $clr_highlight_pale;
+      transition: 0s;
     }
 
     @media screen and (min-width: 768px){
