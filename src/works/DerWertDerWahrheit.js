@@ -4,7 +4,7 @@ export default class DerWertDerWahrheit extends React.Component {
 
   render() {
     return (
-      <div className='works-page'>
+      <div className='WorksPage'>
         <h1>Der Wert der Wahrheit</h1>
         <h2>Transparenz ist ein Marketinginstrument– wie macht ein von Aktivisten gemachter Dokumentarfilm über ihr
           eigenes Projekt seinen Wirklichkeitsfilter transparent?</h2>
