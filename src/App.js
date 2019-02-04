@@ -20,7 +20,7 @@ export default function App({ children }) {
   });
 
   return (
-    <Router basename={packageJson.basename} history={ history }>
+    <Router history={ history }>
       <div className="App">
         <Navigation/>
         <Layout children={ children }>

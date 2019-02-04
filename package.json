@@ -2,8 +2,7 @@
   "name": "michelleakanji.ch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.twigo.ch/_test/michelleakanji-react2",
-  "basename": "/_test/michelleakanji-react2",
+  "homepage": "http://www.michelleakanji.twigo.ch",
   "dependencies": {
     "chroma-js": "^2.0.2",
     "history": "^4.7.2",
