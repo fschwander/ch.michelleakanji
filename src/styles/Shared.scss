@@ -11,7 +11,7 @@
 .App {
   * {
     font-family: Avenir, Helvetica, Futura, Tahoma, sans-serif;
-    line-height: 1.4;
+    line-height: 1.6;
     color: $clr_black;
   }
 
@@ -20,10 +20,12 @@
     font-size: 5vmax;
     line-height: 100%;
     text-align: justify;
+    margin: 2em 0 1em;
   }
 
   h2 {
     font-size: 1em;
+
   }
 
   h3 {

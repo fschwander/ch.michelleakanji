@@ -2,27 +2,30 @@
   position: relative;
   height: 35vw;
   min-height: 358px;
+  max-height: 450px;
   display: flex;
   justify-content: center;
   margin-bottom: 3em;
 
   .random-h-pos-container {
     padding: 6px;
-
-    &:hover {
-      background-color: $clr_highlight_pale;
-      transition: 0s;
-    }
+    width: 50vw;
+    min-width: 250px;
+    max-width: 300px;
 
     @media screen and (min-width: 768px){
       position: absolute;
-      width: 30vw;
-      max-width: 300px;
     }
 
-    img {
+    &:hover {
+      transition: 0s;
+    }
+
+    .imageBox {
       width: 100%;
-      max-width: 300px;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center center;
     }
 
     h2 {
