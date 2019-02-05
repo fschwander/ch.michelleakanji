@@ -3,6 +3,7 @@ import WorksTile from "../components/WorksTile";
 
 import imgSolange from "../res/imgs/solange.png"
 import imgVaterland from "../res/imgs/vaterland.jpg"
+import imgHeimat from "../res/imgs/heimat.jpg"
 
 
 export default class WorksPage extends React.Component {
@@ -17,25 +18,25 @@ export default class WorksPage extends React.Component {
       },
       {
         title: 'Heimat schreiben',
-        description: 'Essay',
-        image: imgSolange,
+        description: 'Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind – wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben',
+        image: imgHeimat,
         link: 'heimat-schreiben'
       },
       {
         title: 'Protest-Selfie',
-        description: 'Reportage',
+        description: 'Zwischen Selbstdarstellung und Protest-Identität',
         image: imgSolange,
         link: 'protest-selfie'
       },
       {
         title: 'Der Wert der Wahrheit',
-        description: '',
+        description: 'Transparenz ist ein Marketinginstrument – wie macht ein von Aktivisten gemachter Dokumentarfilm über ihr eigenes Projekt seinen Wirklichkeitsfilter transparent?',
         image: imgSolange,
         link: 'der-wert-der-wahrheit'
       },
       {
         title: 'Schlimmstenfalls eine Utopie',
-        description: '',
+        description: 'Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in der Zürcher Hardau.',
         image: imgSolange,
         link: 'schlimmstenfalls-eine-utopie'
       }
@@ -58,13 +59,13 @@ export default class WorksPage extends React.Component {
   }
 
   getRandomHPos() {
-    return Math.random() * 65;
+    return Math.random() * 60;
   }
 
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         { this.getAllWorksTiles() }
       </div>
     )

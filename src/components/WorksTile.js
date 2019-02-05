@@ -12,7 +12,7 @@ export default class WorksTile extends React.Component {
                style={ { backgroundImage: `url(${this.props.image})` } }>
           </div>
           <h2>{ this.props.title }</h2>
-          <p>{ this.props.description }</p>
+          <p className='no-intent'>{ this.props.description }</p>
         </div>
       </Link>
     )

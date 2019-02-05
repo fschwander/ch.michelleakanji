@@ -1,20 +1,22 @@
 .WorksTile {
-  position: relative;
-  height: 35vw;
   min-height: 358px;
-  max-height: 450px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   .random-h-pos-container {
     padding: 6px;
     width: 50vw;
     min-width: 250px;
     max-width: 300px;
+    margin: auto;
 
     @media screen and (min-width: 768px){
-      position: absolute;
+      position: relative;
+      margin: unset;
     }
 
     &:hover {
@@ -34,6 +36,7 @@
 
     p {
       margin: 0;
+      line-height: 1.6em;
     }
   }
 }

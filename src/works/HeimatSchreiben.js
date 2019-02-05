@@ -1,4 +1,6 @@
 import * as React from "react";
+import imgHeimat from '../res/imgs/heimat.jpg'
+import { Image } from "react-bootstrap";
 
 export default class HeimatSchreiben extends React.Component {
 
@@ -9,7 +11,9 @@ export default class HeimatSchreiben extends React.Component {
         <h2>Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind –
           wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben.</h2>
 
-        <span>Cristina de Middel: My Life in the Bush of Ghosts, 2015</span>
+        <Image src={ imgHeimat }/>
+
+        <p className='no-text-intent'>Cristina de Middel: My Life in the Bush of Ghosts, 2015</p>
 
         <p>Auf die Frage nach Herkunft hat jeder, der sich mehr als einer Kultur zughörig fühlt, viele Antworten parat.
           Denn das „wo(her)“ lässt sich schlecht verorten: Wo ich geboren wurde, wo ich lebe, wo meine Familie lebt, wo
