@@ -1,12 +1,12 @@
 @import "Variables";
 // pages
 @import "../pages/ContactPage";
-@import "../pages/WorksPage";
 // components
 @import "../components/Layout";
 @import "../components/Navigation";
 @import "../components/WorksTile";
-@import "../works/WorksPage";
+
+@import "../pages/WorksPage";
 
 .App {
   * {
@@ -32,8 +32,14 @@
   }
 
   p {
+    //font-family: Rasa, Unna, Lusitana, 'Gentium Book Basic', 'Frank Ruhl Libre', 'Josefin Slab', Lustria, serif;
+    //font-size: 1.3em;
     line-height: 1.8;
     margin-bottom: 1.5em;
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   .no-text-intent {

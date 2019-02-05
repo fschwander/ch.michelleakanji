@@ -12,6 +12,11 @@
       }
     }
 
+    a {
+      color: $clr_black;
+      text-decoration: unset;
+    }
+
     .active {
       a {
         background-color: transparent;
@@ -34,10 +39,6 @@
           }
         }
       }
-    }
-
-    a {
-      color: $clr_black;
     }
 
     .navbar-toggle {

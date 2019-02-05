@@ -1,9 +1,14 @@
 import * as React from "react";
 import WorksTile from "../components/WorksTile";
 
-import imgSolange from "../res/imgs/solange.png"
+import imgSolange from "../res/imgs/solange.jpg"
 import imgVaterland from "../res/imgs/vaterland.jpg"
 import imgHeimat from "../res/imgs/heimat.jpg"
+import imgCriticalWhiteness from '../res/imgs/critical-whiteness.jpg';
+import imgHardau from '../res/imgs/hardau.jpg';
+import imgNegritude from '../res/imgs/negritude.jpg';
+import imgSpurenImSand from '../res/imgs/spuren-im-sand.jpg';
+import imgProtestSelfie from '../res/imgs/protest-selfie.png';
 
 
 export default class WorksPage extends React.Component {
@@ -18,27 +23,45 @@ export default class WorksPage extends React.Component {
       },
       {
         title: 'Heimat schreiben',
-        description: 'Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind – wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben',
+        description: 'Essay über das Schreiben',
         image: imgHeimat,
         link: 'heimat-schreiben'
       },
       {
         title: 'Protest-Selfie',
-        description: 'Zwischen Selbstdarstellung und Protest-Identität',
-        image: imgSolange,
+        description: 'Artikel über Protest-Selfies in PROTEST-Publikation für das Museum für Gestaltung',
+        image: imgProtestSelfie,
         link: 'protest-selfie'
       },
       {
-        title: 'Der Wert der Wahrheit',
-        description: 'Transparenz ist ein Marketinginstrument – wie macht ein von Aktivisten gemachter Dokumentarfilm über ihr eigenes Projekt seinen Wirklichkeitsfilter transparent?',
-        image: imgSolange,
-        link: 'der-wert-der-wahrheit'
+        title: 'Schlimmstenfalls eine Utopie',
+        description: 'Reportage über das Hardauquartier',
+        image: imgHardau,
+        link: 'schlimmstenfalls-eine-utopie'
       },
       {
-        title: 'Schlimmstenfalls eine Utopie',
-        description: 'Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in der Zürcher Hardau.',
+        title: 'Spuren im Sand',
+        description: 'Metareporter-Beitrag für REPORTAGEN',
+        image: imgSpurenImSand,
+        link: 'spuren-im-sand'
+      },
+      {
+        title: 'Critical Whiteness: Looking at one\'s self through the eyes of others',
+        description: 'Fachartikel in der Publikation "Im Welttheater" für das Zürcher Theater Spektakel',
+        image: imgCriticalWhiteness,
+        link: 'critical-whiteness'
+      },
+      {
+        title: 'Solange – A Seat at the Table',
+        description: 'Albumrezension für GDS FM',
         image: imgSolange,
-        link: 'schlimmstenfalls-eine-utopie'
+        link: 'solange'
+      },
+      {
+        title: 'W wie Négritude',
+        description: 'Fachartikel in der Publikation "Dada Afrika" für das Museum Rietberg',
+        image: imgNegritude,
+        link: 'w-wie-negritude'
       }
     ]
   }

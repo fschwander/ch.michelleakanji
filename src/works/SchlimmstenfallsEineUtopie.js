@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Image } from "react-bootstrap";
+import img from '../res/imgs/hardau.jpg'
 
 export default class SchlimmstenfallsEineUtopie extends React.Component {
 
@@ -8,6 +10,9 @@ export default class SchlimmstenfallsEineUtopie extends React.Component {
         <h1>Schlimmstenfalls eine Utopie</h1>
         <h2>Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in
           der Zürcher Hardau.</h2>
+
+        <Image src={img} />
+
         <p>Marcel Wintsch ist eigentlich schwindelfrei. Früher war er Maurer. Doch wenn der Hauwart auf dem Dach zu tun
           hat, ist ihm flau im Magen. Belohnt wird er mit einer Aussicht auf die ganze Stadt. Bei guter Sicht sieht er
           bis zum „Vrenelis Gärtli“ das hell leuchtende Schneefeld auf dem Glärnisch. Die Stadt Zürich besitzt da ein

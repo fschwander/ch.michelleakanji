@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Image } from "react-bootstrap";
+import img from '../res/imgs/protest-selfie2.jpg'
 
 export default class ProtestSelfie extends React.Component {
 
@@ -7,6 +9,13 @@ export default class ProtestSelfie extends React.Component {
       <div className='WorksPage'>
         <h1>Protest-Selfie</h1>
         <h2>Zwischen Selbstdarstellung und Protest-Identität</h2>
+
+        <p className='no-text-intent'>Text erschienen in: Protest. Eine Zukunftspraxis. Zürcher Hochschule der Künste
+          (ZHdK) / Basil Rogger, Jonas Voegeli, Ruedi Widmer, Museum für Gestaltung Zürich (Hg.)
+          Lars Müller Publishers, 2018.</p>
+
+        <Image src={ img }/>
+
         <p>Das Protest-Selfie ist ein Selbstporträt mit einer handgeschriebenen politischen Nachricht, das sich mit
           vielen anderen der gleichen Art in sozialen Netzwerken zu einem Selfie-Protest zusammenfügt. Eine solche
           Bewegung funktioniert über Einzelbilder, die dasselbe Hashtag verwenden und so einen virtuellen Schwarm
@@ -56,7 +65,7 @@ export default class ProtestSelfie extends React.Component {
           und Protest-Identität aufeinander wirken. Oder ist das Protest-Selfie vielleicht doch nur eine politisch
           inszenierte Form der Selbstdarstellung?</p>
 
-        <h3>#BRINGBACKOURGIRLS </h3>
+        <h3>#bringbackourgirls </h3>
         <p>Nach der Massenentführung von 276 Schülerinnen in Chibok im Nordosten Nigerias durch Boko Haram
           organisierte eine Gruppe um die ehemalige nigerianische Ministerin Oby Ezekwesili im April 2014 einen Marsch
           zum Haus der Nationalversammlung in der Hauptstadt Abuja. Die Parole »Bring Back Our Girls« auf selbstgemalten
@@ -73,7 +82,7 @@ export default class ProtestSelfie extends React.Component {
           Massenentführung. (www. theguardian.com/world/2015/ apr/01/nigeria-election-goodluck- jonathan-lost,
           aufgerufen am 28.8.2017.) </p>
 
-        <h3>PARTIZIPATIONSKULTUR </h3>
+        <h3>Partizipationskultur </h3>
         <p>Durch Möglichkeiten der Mobilisierung und Vernetzung entstehen Räume der partizipativen Demokratie. Es
           entwickelt sich eine Kultur der Beteiligung, der Partizipation, in der Individuen nicht mehr nur Konsumenten,
           sondern auch Mitwirkende und Produzenten sind. Für den Medienwissenschaftler Henry Jenkins bewegt die
@@ -87,7 +96,7 @@ export default class ProtestSelfie extends React.Component {
           Verbundenheit mit anderen Mitgliedern spüren (Jenkins, Henry: Confronting the Challenges of Participatory
           Culture. Media Education for the 21st Century. Cambridge, 2009.)</p>
 
-        <h3>PROTEST IM VIRTUELLEN ÖFFENTLICHEN RAUM</h3>
+        <h3>Protest im virtuellen öffentlichen Raum</h3>
         <p>Protest im virtuellen öffentlichen Raum beruht auf der Prämisse, dass das Internet Öffentlichkeit erzeugen
           kann und dass die Grenzen zwischen Realität und virtueller Realität durchlässig sind. Ein wesentlicher Teil
           der Protestaktivitäten wurde bereits stark in den virtuellen Raum verlagert: Information, Akquisition,
@@ -99,14 +108,17 @@ export default class ProtestSelfie extends React.Component {
           formen werden zwar hinsichtlich ihrer politischen Wirkung geringer eingeschätzt als ihr physisches Pendant,
           von Unternehmen werden sie jedoch sehr ernst genommen. </p>
 
-        <p>Fahlenbrach, Kathrin: Protest-Inszenierungen. Visuelle Kommunikation und kollektive Identitäten in
+        <p className='no-text-intent'>Fahlenbrach, Kathrin: Protest-Inszenierungen. Visuelle Kommunikation und kollektive Identitäten in
           Protestbewegungen. Wiesbaden, 2002. </p>
-        <p>Grohmann, Miriam; Kamil Abdulsalam, Layla; Wyss, Eva: Selfie-Proteste – eine emergente Praktik des Protests
+        <p className='no-text-intent'>Grohmann, Miriam; Kamil Abdulsalam, Layla; Wyss, Eva: Selfie-Proteste – eine emergente Praktik des Protests
           im Web 2.0. In: Aptum. Zeitschrift für Sprachkritik und Sprachkultur 01 (2015), S. 21–47. </p>
-        <p>Marichal, Jose: Political Facebook Groups. Micro-Activism and the Digital Front Stage. In: First Monday 18/12
-          (2013). <a href={'http://www.firstmonday.org/article/view/4653/3800'} target='_blank' rel='noreferrer noopener'>Link</a>, aufgerufen am 3. 7. 2017. </p>
-        <p>Schankweiler, Kerstin: Selfie-Proteste. Affektzeugenschaften und Bildökonomien in den Social Media. Working
-          Paper SFB 1171 Affective Societies 05/16 (2016). <a href={'http://www.edocs.fu-berlin.de/docs/receive/FUDOCS_series_000000000562'} target='_blank' rel='noreferrer noopener'>Link</a>, aufgerufen am 3. 7. 2017. </p>
+        <p className='no-text-intent'>Marichal, Jose: Political Facebook Groups. Micro-Activism and the Digital Front Stage. In: First Monday 18/12
+          (2013). <a href={ 'http://www.firstmonday.org/article/view/4653/3800' } target='_blank'
+                     rel='noreferrer noopener'>Link</a>, aufgerufen am 3. 7. 2017. </p>
+        <p className='no-text-intent'>Schankweiler, Kerstin: Selfie-Proteste. Affektzeugenschaften und Bildökonomien in den Social Media. Working
+          Paper SFB 1171 Affective Societies 05/16 (2016). <a
+            href={ 'http://www.edocs.fu-berlin.de/docs/receive/FUDOCS_series_000000000562' } target='_blank'
+            rel='noreferrer noopener'>Link</a>, aufgerufen am 3. 7. 2017. </p>
       </div>
     )
   }

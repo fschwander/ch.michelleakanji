@@ -1,5 +1,5 @@
 import * as React from "react";
-import imgHeimat from '../res/imgs/heimat.jpg'
+import img from '../res/imgs/heimat.jpg'
 import { Image } from "react-bootstrap";
 
 export default class HeimatSchreiben extends React.Component {
@@ -11,7 +11,7 @@ export default class HeimatSchreiben extends React.Component {
         <h2>Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind –
           wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben.</h2>
 
-        <Image src={ imgHeimat }/>
+        <Image src={ img }/>
 
         <p className='no-text-intent'>Cristina de Middel: My Life in the Bush of Ghosts, 2015</p>
 
@@ -145,8 +145,6 @@ export default class HeimatSchreiben extends React.Component {
           universal longings, that you’re not lonely and isolated from anyone. You belong“, schrieb F. Scott Fitzgerald.
           Und fast verborgen bleibt die Hoffnung, dass ich durch das Schreiben einen Ort schaffen kann, den ich Heimat
           nennen würde.</p>
-        <p></p>
-        <p></p>
       </div>
     )
   }
