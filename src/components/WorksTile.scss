@@ -26,11 +26,20 @@
       transition: 0s;
     }
 
-    .imageBox {
+    .imageContainer {
       width: 100%;
-      padding-bottom: 100%;
-      background-size: cover;
-      background-position: center center;
+      overflow: hidden;
+
+      .imageBox {
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center center;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
     }
 
     h2 {

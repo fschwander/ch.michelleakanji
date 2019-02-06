@@ -3,6 +3,9 @@
   background-color: $clr_white;
 
   .container {
+    .navbar-brand {
+      font-size: 1.4em;
+    }
 
     .navbar-collapse {
       @media screen and (max-width: 768px) {
@@ -14,6 +17,7 @@
 
     a {
       color: $clr_black;
+      font-size: 1.2em;
       text-decoration: unset;
     }
 

@@ -8,8 +8,10 @@ export default class WorksTile extends React.Component {
       <Link className='WorksTile' to={ this.props.link }>
         <div className='random-h-pos-container'
              style={ { left: this.props.left + '%' } }>
-          <div className='imageBox'
-               style={ { backgroundImage: `url(${this.props.image})` } }>
+          <div className='imageContainer'>
+            <div className='imageBox'
+                 style={ { backgroundImage: `url(${this.props.image})` } }>
+            </div>
           </div>
           <h2>{ this.props.title }</h2>
           <p className='no-intent'>{ this.props.description }</p>

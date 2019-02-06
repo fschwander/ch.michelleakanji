@@ -8,7 +8,7 @@ import imgCriticalWhiteness from '../res/imgs/critical-whiteness.jpg';
 import imgHardau from '../res/imgs/hardau.jpg';
 import imgNegritude from '../res/imgs/negritude.jpg';
 import imgSpurenImSand from '../res/imgs/spuren-im-sand.jpg';
-import imgProtestSelfie from '../res/imgs/protest-selfie.png';
+import imgProtestSelfie from '../res/imgs/protest-selfie.jpg';
 
 
 export default class WorksPage extends React.Component {
@@ -84,7 +84,6 @@ export default class WorksPage extends React.Component {
   getRandomHPos() {
     return Math.random() * 60;
   }
-
 
   render() {
     return (
