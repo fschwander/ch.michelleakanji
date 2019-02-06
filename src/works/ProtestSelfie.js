@@ -3,6 +3,10 @@ import { Image } from "react-bootstrap";
 import img from '../res/imgs/protest-selfie2.jpg'
 
 export default class ProtestSelfie extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return (

@@ -7,6 +7,10 @@ import img from '../res/imgs/vaterland.jpg'
 
 
 export default class Vaterland extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     const colorScale = chroma

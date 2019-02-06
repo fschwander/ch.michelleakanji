@@ -4,6 +4,10 @@ import img from '../res/imgs/critical-whiteness.jpg'
 
 
 export default class CriticalWhiteness extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return (

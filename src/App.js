@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Shared.scss';
 import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
-import { createBrowserHistory } from "history";
+import { createHashHistory } from "history";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
@@ -18,7 +18,7 @@ import Negritude from "./works/Negritude";
 
 export default function App({ children }) {
 
-  const history = createBrowserHistory();
+  const history = createHashHistory();
 
   return (
     <HashRouter history={ history }>

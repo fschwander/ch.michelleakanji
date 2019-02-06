@@ -3,6 +3,10 @@ import { Image } from "react-bootstrap";
 import img from '../res/imgs/hardau.jpg'
 
 export default class SchlimmstenfallsEineUtopie extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return (

@@ -1,6 +1,10 @@
 import * as React from "react";
 
 export default class DerWertDerWahrheit extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return (

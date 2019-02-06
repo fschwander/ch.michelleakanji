@@ -3,6 +3,10 @@ import { Image } from "react-bootstrap";
 import img from '../res/imgs/spuren-im-sand.jpg'
 
 export default class SpurenImSand extends React.Component {
+  //todo: remove me after fixing scroll to wrong position
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return (
