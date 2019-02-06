@@ -2,10 +2,9 @@
   min-height: 358px;
   display: flex;
   margin-bottom: 4em;
-  text-decoration: unset !important;
 
-  &:hover {
-    text-decoration: none;
+  a {
+    text-decoration: none !important;
   }
 
   .random-h-pos-container {

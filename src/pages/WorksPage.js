@@ -53,7 +53,7 @@ export default class WorksPage extends React.Component {
       },
       {
         title: 'Solange – A Seat at the Table',
-        description: 'Albumrezension für GDS FM',
+        description: 'Albumrezension für GDS.FM',
         image: imgSolange,
         link: 'solange'
       },
