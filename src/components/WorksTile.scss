@@ -8,7 +8,6 @@
   }
 
   .random-h-pos-container {
-    padding: 6px;
     width: 50vw;
     min-width: 250px;
     max-width: 300px;
@@ -26,33 +25,39 @@
       max-width: unset;
     }
 
-    &:hover {
-      transition: 0s;
-    }
-
-    .imageContainer {
+    .container {
       width: 100%;
-      overflow: hidden;
+      transition: 0.1s linear;
+      padding: 0;
 
-      .imageBox {
-        padding-bottom: 100%;
-        background-size: cover;
-        background-position: center center;
-        transition: 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
 
-        &:hover {
+        .imageBox {
           transform: scale(1.04);
         }
       }
-    }
 
-    h2 {
-      margin: 8px 0 2px;
-    }
+      .imageContainer {
+        width: 100%;
+        overflow: hidden;
 
-    p {
-      margin: 0;
-      line-height: 1.6em;
+        .imageBox {
+          padding-bottom: 100%;
+          background-size: cover;
+          background-position: center center;
+          transition: 0.1s linear;
+        }
+      }
+
+      h2 {
+        margin: 8px 0 2px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.6em;
+      }
     }
   }
 }

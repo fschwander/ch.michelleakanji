@@ -24,17 +24,16 @@ export default class Vaterland extends React.Component {
     return (
       <div className='WorksPage'>
 
-        <div className='horizontal-container header-container'>
-          <div className='audio-player'>
-            <PlayAudio
-              url={ audioFile }
-              colorScale={ colorScale }
-              width={ 100 }/>
-          </div>
-          <h1>Vaterland</h1>
-        </div>
+        <h1>Vaterland</h1>
 
         <Image src={ img }/>
+
+        <div className='audio-player'>
+          <PlayAudio
+            url={ audioFile }
+            colorScale={ colorScale }
+            width={ 100 }/>
+        </div>
 
         <p>Vaterland ist ein 45-minütiges Audiofeature, das eine persönliche Geschichte erzählt. Eine Tochter stellt
           sich dem fremd-vertrauten Verhältnis zu ihrem Vater, der zwar im selben Land, doch in einer anderen Gegenwart
@@ -42,10 +41,11 @@ export default class Vaterland extends React.Component {
           Erstgeborene nicht zurecht. Und als die beiden endlich wieder eine gemeinsame Sprache finden, nimmt das Leben
           eine neue Wendung.</p>
 
-        <p>Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education Kulturpublizistik an der
+        <p className='no-text-intent'>Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education Kulturpublizistik an der
           Zürcher Hochschule der Künste.</p>
         <p className='no-text-intent'>Mentor: Claudio Bucher</p>
         <p className='no-text-intent'>Mastering: Flo Schär</p>
+        <p className='no-text-intent'>Foto: Johanna Hullár</p>
         <p className='no-text-intent'>Veröffentlicht in der&nbsp;
           <a href={ 'https://www.republik.ch/2018/09/18/wer-bist-du-vater' } target='_blank' rel="noopener noreferrer">
             REPUBLIK

@@ -1,87 +1,85 @@
 #Navigation {
-  border: unset;
   background-color: $clr_white;
+  border: unset;
 
   .container {
-    .navbar-brand {
-      font-size: 1.4em;
-    }
-
-    .navbar-collapse {
-      @media screen and (max-width: 767px) {
-        border: 1px solid;
-        border-left: unset;
-        border-right: unset;
-      }
-    }
-
     a {
-      color: $clr_black;
-      font-size: 1.2em;
       text-decoration: unset;
     }
 
-    .active {
+    li {
+      display: flex;
+      margin: 0 15px;
+
       a {
-        background-color: transparent;
+        color: $clr_black;
+        font-size: 1.1em;
+      }
 
-        @media screen and (max-width: 767px) {
-          & {
-            text-decoration: underline;
-          }
+      &.active {
+        a {
+          border-bottom: 2px solid $clr_black;
+          background-color: transparent;
         }
+      }
+    }
 
-        @media screen and (min-width: 768px) {
-          &:after {
-            content: '';
-            width: 90%;
-            left: 5%;
-            position: absolute;
-            bottom: -2px;
-            border-width: 0 0 2px;
-            border-style: solid;
-          }
-        }
+    .navbar-brand {
+      font-size: 1em;
+      h1 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1.4em;
+      }
+    }
+
+    .navbar-collapse {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 1em;
+
+      @media screen and (max-width: 767px) {
+        border-top: 2px solid $clr_black;
+        border-bottom: 2px solid $clr_black;
       }
     }
 
     .navbar-toggle {
       border-color: transparent;
       background-color: transparent;
+      padding-right: 0;
+      position: relative;
 
-      span {
+      .icon-bar {
         border-radius: 0;
+        width: 28px;
         background-color: $clr_black;
         transition: ease-in-out 0.2s;
-      }
-      span:nth-child(1) {
-        top: 0;
         transform-origin: left center;
-      }
-      span:nth-child(2) {
-        top: 18px;
-        transform-origin: left center;
-      }
-      span:nth-child(3) {
-        top: 36px;
-        transform-origin: left center;
+        & + .icon-bar {
+          margin-top: 6px;
+        }
       }
 
       &:not(.collapsed) {
-        span:nth-child(2) {
-          transform: rotate(45deg);
-        }
-        span:nth-child(3) {
-          transform: translate(4.5px, 100%);
-          width: 0;
-          opacity: 0;
-          transition: ease-in-out 0.1s;
-        }
-        span:nth-child(4) {
-          transform: translate(-2.5px, -4.5px) rotate(-45deg);
+        .icon-bar {
+          width: 24px;
+          margin-right: 2px;
+
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: translate(4.5px, 100%);
+            width: 0;
+            opacity: 0;
+            transition: ease-in-out 0.1s;
+          }
+          &:nth-child(4) {
+            transform: rotate(-45deg);
+          }
         }
       }
-
     }
   }
 }
