@@ -10,7 +10,7 @@ export default class SpurenImSand extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>Spuren im Sand</h1>
         <h2>Das Schicksal einer Fotoikone in Zeiten, in denen alles verschwimmt.</h2>
 

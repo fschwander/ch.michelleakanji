@@ -10,7 +10,7 @@ export default class Solange extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>Solange - A Seat at a Table</h1>
         <p className='no-text-intent'>
           Text erschienen in&nbsp;

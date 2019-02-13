@@ -1,8 +1,11 @@
 #Navigation {
   background-color: $clr_white;
   border: unset;
+  padding-top: 0.5em;
 
   .container {
+    max-width: 740px;
+
     a {
       text-decoration: unset;
     }

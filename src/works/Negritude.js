@@ -11,7 +11,7 @@ export default class Negritude extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>N wie Négritude</h1>
         <p className='no-text-intent'>Veröffentlicht in&nbsp;
           <a href={ 'http://www.zollfreilager.net/dictionaries/n-wie-negritude/' }

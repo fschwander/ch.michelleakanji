@@ -10,7 +10,7 @@ export default class SchlimmstenfallsEineUtopie extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>Schlimmstenfalls eine Utopie</h1>
         <h2>Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in
           der Zürcher Hardau.</h2>

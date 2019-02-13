@@ -10,7 +10,7 @@ export default class HeimatSchreiben extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>Heimat schreiben</h1>
         <h2>Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind –
           wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben.</h2>

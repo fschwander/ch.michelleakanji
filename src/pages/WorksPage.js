@@ -87,7 +87,7 @@ export default class WorksPage extends React.Component {
 
   render() {
     return (
-      <div className='Works'>
+      <div className='WorksPage'>
         { this.getAllWorksTiles() }
       </div>
     )

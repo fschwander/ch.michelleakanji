@@ -22,7 +22,7 @@ export default class Vaterland extends React.Component {
       .colors(5)
 
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
 
         <h1>Vaterland</h1>
 
@@ -41,7 +41,8 @@ export default class Vaterland extends React.Component {
           Erstgeborene nicht zurecht. Und als die beiden endlich wieder eine gemeinsame Sprache finden, nimmt das Leben
           eine neue Wendung.</p>
 
-        <p className='no-text-intent'>Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education Kulturpublizistik an der
+        <p className='no-text-intent'>Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education
+          Kulturpublizistik an der
           Zürcher Hochschule der Künste.</p>
         <p className='no-text-intent'>Mentor: Claudio Bucher</p>
         <p className='no-text-intent'>Mastering: Flo Schär</p>

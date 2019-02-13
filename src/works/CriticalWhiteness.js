@@ -11,7 +11,7 @@ export default class CriticalWhiteness extends React.Component {
 
   render() {
     return (
-      <div className='WorksPage'>
+      <div className='Works'>
         <h1>Critical Whiteness</h1>
         <h2>Looking at one's self through the eyes of others</h2>
         <p className='no-text-intent'>Text erschienen in&nbsp;
