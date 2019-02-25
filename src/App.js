@@ -2,8 +2,8 @@ import React from 'react';
 import './styles/Shared.scss';
 import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
-import { createHashHistory } from "history";
-import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import Vaterland from "./works/Vaterland";
@@ -18,15 +18,14 @@ import Negritude from "./works/Negritude";
 
 export default function App({ children }) {
 
-  const history = createHashHistory();
+  const history = createBrowserHistory();
 
   return (
-    <HashRouter history={ history }>
+    <Router history={ history }>
       <div className="App">
         <Navigation/>
         <Layout children={ children }>
           <Switch>
-            <Route exact path={ '/' } render={ () => <Redirect to={ '/works' }/> }/>
             <Route path={ '/works' } component={ props => <WorksPage { ...props }/> }/>
             <Route path={ '/contact' } component={ props => <ContactPage { ...props } /> }/>
 
@@ -40,9 +39,11 @@ export default function App({ children }) {
             <Route path={ '/critical-whiteness' } component={ props => <CriticalWhiteness { ...props } /> }/>
             <Route path={ '/solange' } component={ props => <Solange { ...props } /> }/>
             <Route path={ '/w-wie-negritude' } component={ props => <Negritude { ...props } /> }/>
+
+            <Route path={ '/' } render={ () => <Redirect to={ '/works' }/> }/>
           </Switch>
         </Layout>
       </div>
-    </HashRouter>
+    </Router>
   );
 }

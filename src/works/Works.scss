@@ -23,6 +23,11 @@
 
   .audio-player {
     padding: 0.5em 0 1.5em;
+    transition: 0.1s linear;
+
+    &:hover {
+      transform: scale(1.04);
+    }
 
     div {
       display: flex;

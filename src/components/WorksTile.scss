@@ -27,14 +27,14 @@
 
     .container {
       width: 100%;
-      transition: 0.1s linear;
+      transition: 0.1s ease-in-out;
       padding: 0;
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
 
         .imageBox {
-          transform: scale(1.04);
+          transform: scale(1.03);
         }
       }
 

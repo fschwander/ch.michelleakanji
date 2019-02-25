@@ -241,7 +241,7 @@ export default class SchlimmstenfallsEineUtopie extends React.Component {
           Einrichtung wie das Gantlokal eingeplant ist? Ein Treffpunkt für Menschen wie Frau Dallarossa oder Frau
           Bernaschina. Im Erdgeschoss sollen Ladenlokale und Ateliers hin, die am Samstag geöffnet sind und die Siedlung
           beleben. Dabei lebt die Hardau doch schon.</p>
-        <p>Einfach ein bisschen anders.</p>
+        <p className='no-text-intent'>Einfach ein bisschen anders.</p>
       </div>
     )
   }

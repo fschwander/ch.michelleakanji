@@ -11,7 +11,7 @@ export default class Solange extends React.Component {
   render() {
     return (
       <div className='Works'>
-        <h1>Solange - A Seat at a Table</h1>
+        <h1>Solange - A Seat at the Table</h1>
         <p className='no-text-intent'>
           Text erschienen in&nbsp;
           <a href={ 'http://gds.fm/news/studio-gds-praesentiert-solange-a-seat-at-the-table' }

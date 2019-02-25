@@ -14,6 +14,7 @@ export default class CriticalWhiteness extends React.Component {
       <div className='Works'>
         <h1>Critical Whiteness</h1>
         <h2>Looking at one's self through the eyes of others</h2>
+
         <p className='no-text-intent'>Text erschienen in&nbsp;
           <a href={ 'http://www.zollfreilager.net/agencies/critical-whiteness-eine-frage-des-blicks/' }
              target='_blank' rel='noreferrer noopener'>ZOLLFREILAGER</a>, 15.08.18

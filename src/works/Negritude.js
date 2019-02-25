@@ -13,14 +13,15 @@ export default class Negritude extends React.Component {
     return (
       <div className='Works'>
         <h1>N wie Négritude</h1>
+
         <p className='no-text-intent'>Veröffentlicht in&nbsp;
           <a href={ 'http://www.zollfreilager.net/dictionaries/n-wie-negritude/' }
              target='_blank' rel='noreferrer noopener'>ZOLLFREILAGER</a>
           , 04.07.16
         </p>
 
-
         <Image src={ img }/>
+
         <p>Rund zehn Jahre nach dem «Kongress von Paris» 1922, der als Auflösungsmoment der Dada-Bewegung gilt, wurde
           in derselben Stadt im Zuge der dekolonialistischen Bewegungen die Négritude entwickelt. Hinter dem
           Kampfbegriff stand eine philosophisch- politische Strömung, angeführt von Intellektuellen der schwarzen

@@ -26,6 +26,21 @@ export default class Vaterland extends React.Component {
 
         <h1>Vaterland</h1>
 
+        <p className='no-text-intent'>Ausgezeichnet mit dem Jurypreis und dem Publikumspreis am 9.&nbsp;
+          <a href="http://www.sonohr.ch" target='_blank' rel="noopener noreferrer">sonOhr Radio und Podcast Festival</a>
+          &nbsp;(22.-24.02.19) in Bern.
+        </p>
+
+        <p className='no-text-intent'>Veröffentlicht in der&nbsp;
+          <a href={ 'https://www.republik.ch/2018/09/18/wer-bist-du-vater' } target='_blank' rel="noopener noreferrer">
+            REPUBLIK
+          </a>
+          ,18.09.18 und in&nbsp;
+          <a href={ 'http://www.srf.ch/medien/news/passage-vaterland/' } target='_blank' rel="noopener noreferrer">
+            Passage des Schweizer Radio und Fernsehen SRF</a>
+          , 01.02.19.
+        </p>
+
         <Image src={ img }/>
 
         <div className='audio-player'>
@@ -44,18 +59,10 @@ export default class Vaterland extends React.Component {
         <p className='no-text-intent'>Diese Arbeit entstand im Rahmen einer Abschlussarbeit im Master Art Education
           Kulturpublizistik an der
           Zürcher Hochschule der Künste.</p>
+
         <p className='no-text-intent'>Mentor: Claudio Bucher</p>
         <p className='no-text-intent'>Mastering: Flo Schär</p>
         <p className='no-text-intent'>Foto: Johanna Hullár</p>
-        <p className='no-text-intent'>Veröffentlicht in der&nbsp;
-          <a href={ 'https://www.republik.ch/2018/09/18/wer-bist-du-vater' } target='_blank' rel="noopener noreferrer">
-            REPUBLIK
-          </a>
-          ,18.09.18 und in&nbsp;
-          <a href={ 'http://www.srf.ch/medien/news/passage-vaterland/' } target='_blank' rel="noopener noreferrer">
-            Passagen des Schweizer Radio und Fernsehen SRF</a>
-          , 01.02.19.
-        </p>
       </div>
     )
   }
