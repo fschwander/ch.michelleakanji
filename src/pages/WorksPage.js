@@ -1,5 +1,4 @@
-import * as React from "react";
-import WorksTile from "../components/WorksTile";
+import React from "react";
 
 import imgSolange from "../res/imgs/solange.jpg"
 import imgVaterland from "../res/imgs/vaterland.jpg"
@@ -8,13 +7,18 @@ import imgCriticalWhiteness from '../res/imgs/critical-whiteness.jpg';
 import imgHardau from '../res/imgs/hardau.jpg';
 import imgNegritude from '../res/imgs/negritude.jpg';
 import imgSpurenImSand from '../res/imgs/spuren-im-sand.jpg';
-import imgProtestSelfie from '../res/imgs/protest-selfie.jpg';
+import imgProtestSelfie from '../res/imgs/protest-selfie2.jpg';
+import {Carousel} from "react-motion-components";
+import WorksTile from "../components/WorksTile";
 
 
 export default class WorksPage extends React.Component {
 
-  getElementsList() {
-    return [
+  state = {
+    index: 0,
+    effect: "3d",
+    direction: "horizontal",
+    elementsList: [
       {
         title: 'Vaterland',
         description: 'Audiofeature',
@@ -64,32 +68,60 @@ export default class WorksPage extends React.Component {
         link: 'w-wie-negritude'
       }
     ]
-  }
+  };
 
-  getAllWorksTiles() {
-    const elementsList = this.getElementsList();
+  prev = () => {
+    this.setState({index: this.state.index - 1});
+  };
 
-    return elementsList.map(
-      e =>
-        <WorksTile
-          title={ e.title }
-          description={ e.description }
-          key={ e.title }
-          left={ this.getRandomHPos() }
-          image={ e.image }
-          link={ e.link }/>
+  next = () => {
+    this.setState({index: this.state.index + 1});
+  };
+
+  move = index => {
+    this.setState({index});
+  };
+
+  getAllWorksTiles = () => {
+    const {elementsList} = this.state;
+    return elementsList.map((e, i) =>
+      <WorksTile title={e.title}
+                 description={e.description}
+                 key={i}
+                 image={e.image}
+                 link={e.link}/>
     )
-  }
-
-  getRandomHPos() {
-    return Math.random() * 60;
-  }
+  };
 
   render() {
+    const defaultStyle = {
+      width: 400,
+      height: 300,
+      margin: "50px auto"
+    };
+
     return (
       <div className='WorksPage'>
-        { this.getAllWorksTiles() }
+        <div className='carousel-navigation'>
+          <button onClick={this.prev}>prev</button>
+          <button onClick={this.next}>next</button>
+          {Array.from({length: this.state.elementsList.length}, (_, i) => {
+            return <button key={i} onClick={() => this.move(i)}>move {i}</button>
+          })}
+        </div>
+
+        <div className='carousel-body' style={{...defaultStyle}}>
+          <Carousel
+            {...defaultStyle}
+            direction={this.state.direction}
+            effect={this.state.effect}
+            index={this.state.index}
+            onClick={() => console.log(this.state)}
+            onChange={index => this.move(index)}>
+            {this.getAllWorksTiles()}
+          </Carousel>
+        </div>
       </div>
-    )
+    );
   }
 }

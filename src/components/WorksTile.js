@@ -6,8 +6,6 @@ export default class WorksTile extends React.Component {
   render() {
     return (
       <div className='WorksTile'>
-        <div className='random-h-pos-container'
-             style={ { left: this.props.left + '%' } }>
           <div className='container'>
             <Link to={ this.props.link }>
               <div className='imageContainer'>
@@ -18,7 +16,6 @@ export default class WorksTile extends React.Component {
               <h2>{ this.props.title }</h2>
               <p className='no-intent'>{ this.props.description }</p>
             </Link>
-          </div>
         </div>
       </div>
     )

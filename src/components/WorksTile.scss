@@ -1,63 +1,41 @@
 .WorksTile {
   min-height: 358px;
-  display: flex;
-  margin-bottom: 4em;
+  width: 300px;
+  margin: 0 auto 4em;
 
   a {
     text-decoration: none !important;
   }
 
-  .random-h-pos-container {
-    width: 50vw;
-    min-width: 250px;
-    max-width: 300px;
-    margin: auto;
-    transition: 1s ease-in-out;
-    transition-delay: 0.2s;
+  .container {
+    width: 100%;
+    transition: 0.1s ease-in-out;
+    padding: 0;
 
-    @media screen and (min-width: 768px) {
-      position: relative;
-      margin: unset;
+    &:hover .imageBox {
+      transform: scale(1.02);
     }
 
-    @media screen and (max-width: 400px) {
+    .imageContainer {
       width: 100%;
-      max-width: unset;
+      overflow: hidden;
+
+      .imageBox {
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center center;
+        transition: 0.1s linear;
+      }
     }
 
-    .container {
-      width: 100%;
-      transition: 0.1s ease-in-out;
-      padding: 0;
+    h2 {
+      font-size: 2em;
+      margin: 8px 0 2px;
+    }
 
-      &:hover {
-        transform: scale(1.01);
-
-        .imageBox {
-          transform: scale(1.03);
-        }
-      }
-
-      .imageContainer {
-        width: 100%;
-        overflow: hidden;
-
-        .imageBox {
-          padding-bottom: 100%;
-          background-size: cover;
-          background-position: center center;
-          transition: 0.1s linear;
-        }
-      }
-
-      h2 {
-        margin: 8px 0 2px;
-      }
-
-      p {
-        margin: 0;
-        line-height: 1.6em;
-      }
+    p {
+      margin: 0;
+      line-height: 1.6em;
     }
   }
 }
