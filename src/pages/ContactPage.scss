@@ -22,24 +22,39 @@
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: -0px;
-        border-width: 0 0 1px;
+        bottom: -2px;
+        border-width: 0 0 2px;
         border-style: solid;
       }
 
       &:hover {
         &:after {
-          bottom: -2px;
+          bottom: -3px;
+          border-width: 0 0 3px;
         }
       }
     }
 
     .icon {
-      margin-top: 1em;
+      margin-top: 5vh;
       align-self: center;
       img {
-        width: 28px;
+        width: 5vmax;
+        max-width: 2.5em;
+      }
+      &:hover {
+        animation: rotate 1s ease-in-out infinite;
       }
     }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+
   }
 }
