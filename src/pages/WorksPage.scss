@@ -2,4 +2,51 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  button {
+    background-size: 100%;
+    height: 40px;
+    width: 40px;
+    border: unset;
+    stroke: deeppink;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .carousel-navigation {
+    display: flex;
+    justify-content: center;
+    button {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .carousel-body {
+    width: 100vw;
+
+    .carousel-nav-arrows {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      z-index: 1000;
+
+      button {
+        position: absolute;
+      }
+
+      .arrow-left {
+        left: 0;
+      }
+
+      .arrow-right {
+        right: 0;
+      }
+    }
+  }
 }

@@ -10,6 +10,10 @@ import imgSpurenImSand from '../res/imgs/spuren-im-sand.jpg';
 import imgProtestSelfie from '../res/imgs/protest-selfie2.jpg';
 import {Carousel} from "react-motion-components";
 import WorksTile from "../components/WorksTile";
+import iconArrowLeft from "../res/icons/arrow-left.svg"
+import iconArrowRight from "../res/icons/arrow-right.svg"
+import iconSelectionEmpty from "../res/icons/selection-empty.svg"
+import iconSelectionActive from "../res/icons/selection-active.svg"
 
 
 export default class WorksPage extends React.Component {
@@ -18,6 +22,11 @@ export default class WorksPage extends React.Component {
     index: 0,
     effect: "3d",
     direction: "horizontal",
+    defaultStyle: {
+      width: 400,
+      height: 500,
+      margin: "auto"
+    },
     elementsList: [
       {
         title: 'Vaterland',
@@ -94,23 +103,21 @@ export default class WorksPage extends React.Component {
   };
 
   render() {
-    const defaultStyle = {
-      width: 400,
-      height: 300,
-      margin: "50px auto"
-    };
-
+    const {defaultStyle} = this.state;
     return (
       <div className='WorksPage'>
-        <div className='carousel-navigation'>
-          <button onClick={this.prev}>prev</button>
-          <button onClick={this.next}>next</button>
-          {Array.from({length: this.state.elementsList.length}, (_, i) => {
-            return <button key={i} onClick={() => this.move(i)}>move {i}</button>
-          })}
-        </div>
 
         <div className='carousel-body' style={{...defaultStyle}}>
+          <div className='carousel-nav-arrows'>
+            <button className='arrow-left'
+                    style={{backgroundImage: `url(${iconArrowLeft})`}}
+                    onClick={this.prev}/>
+
+            <button className='arrow-right'
+                    style={{backgroundImage: `url(${iconArrowRight})`}}
+                    onClick={this.next}/>
+          </div>
+
           <Carousel
             {...defaultStyle}
             direction={this.state.direction}
@@ -120,6 +127,14 @@ export default class WorksPage extends React.Component {
             onChange={index => this.move(index)}>
             {this.getAllWorksTiles()}
           </Carousel>
+        </div>
+
+        <div className='carousel-navigation'>
+          {Array.from({length: this.state.elementsList.length}, (_, i) => {
+            return <button key={i}
+                           style={{backgroundImage: `url(${i === this.state.index ? iconSelectionActive : iconSelectionEmpty})`}}
+                           onClick={() => this.move(i)}/>
+          })}
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import './styles/Shared.scss';
 import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
 import { createHashHistory } from "history";
-import { HashRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import Vaterland from "./works/Vaterland";
@@ -21,7 +21,7 @@ export default function App({ children }) {
   const history = createHashHistory();
 
   return (
-    <Router history={ history }>
+    <HashRouter history={ history }>
       <div className="App">
         <Navigation/>
         <Layout children={ children }>
@@ -45,6 +45,6 @@ export default function App({ children }) {
 
         </Layout>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
