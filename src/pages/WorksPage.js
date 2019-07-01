@@ -80,15 +80,19 @@ export default class WorksPage extends React.Component {
   };
 
   prev = () => {
-    this.setState({index: this.state.index - 1});
+    let prevIndex = this.state.index - 1 === -1 ? this.state.elementsList.length - 1 : this.state.index - 1;
+    this.setState({index: prevIndex});
   };
 
   next = () => {
-    this.setState({index: this.state.index + 1});
+    let nextIndex = (this.state.index + 1) % this.state.elementsList.length;
+    this.setState({index: nextIndex});
   };
 
   move = index => {
-    this.setState({index});
+    let newIndex = index % this.state.elementsList.length;
+    console.log(newIndex);
+    this.setState({newIndex});
   };
 
   getAllWorksTiles = () => {
@@ -108,6 +112,15 @@ export default class WorksPage extends React.Component {
       <div className='WorksPage'>
 
         <div className='carousel-body' style={{...defaultStyle}}>
+
+          <div className='carousel-pagination'>
+            {Array.from({length: this.state.elementsList.length}, (_, i) => {
+              return <button key={i}
+                             style={{backgroundImage: `url(${i === this.state.index ? iconSelectionActive : iconSelectionEmpty})`}}
+                             onClick={() => this.move(i)}/>
+            })}
+          </div>
+
           <div className='carousel-nav-arrows'>
             <button className='arrow-left'
                     style={{backgroundImage: `url(${iconArrowLeft})`}}
@@ -118,23 +131,13 @@ export default class WorksPage extends React.Component {
                     onClick={this.next}/>
           </div>
 
-          <Carousel
-            {...defaultStyle}
-            direction={this.state.direction}
-            effect={this.state.effect}
-            index={this.state.index}
-            onClick={() => console.log(this.state)}
-            onChange={index => this.move(index)}>
+          <Carousel {...defaultStyle}
+                    direction={this.state.direction}
+                    effect={this.state.effect}
+                    index={this.state.index}
+                    onChange={index => this.move(index)}>
             {this.getAllWorksTiles()}
           </Carousel>
-        </div>
-
-        <div className='carousel-navigation'>
-          {Array.from({length: this.state.elementsList.length}, (_, i) => {
-            return <button key={i}
-                           style={{backgroundImage: `url(${i === this.state.index ? iconSelectionActive : iconSelectionEmpty})`}}
-                           onClick={() => this.move(i)}/>
-          })}
         </div>
       </div>
     );

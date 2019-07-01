@@ -19,7 +19,7 @@ export default class Navigation extends React.Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <LinkContainer to={ '/works' }>
-              <NavItem eventKey={ 0 }>Werke</NavItem>
+              <NavItem eventKey={ 0 }>Arbeiten</NavItem>
             </LinkContainer>
             <LinkContainer to={ '/contact' }>
               <NavItem eventKey={ 1 }>Kontakt</NavItem>

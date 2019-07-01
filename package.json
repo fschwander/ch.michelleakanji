@@ -6,7 +6,7 @@
   "dependencies": {
     "chroma-js": "^2.0.2",
     "history": "^4.7.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "prettier": "^1.16.0",
     "react": "^16.7.0",
     "react-3d-carousels": "^1.0.2",
