@@ -24,7 +24,7 @@ export default class WorksPage extends React.Component {
     direction: "horizontal",
     defaultStyle: {
       width: 400,
-      height: 500,
+      height: 550,
       margin: "auto"
     },
     elementsList: [
@@ -94,8 +94,21 @@ export default class WorksPage extends React.Component {
     )
   };
 
+  getPaginationButtons = () => {
+    let lastElIndex = this.state.elementsList.length;
+    let newIndex = this.state.index % lastElIndex;
+
+    return Array.from({length: this.state.elementsList.length}, (_, i) => {
+      let elIsActive = i === (newIndex < 0 ? newIndex + lastElIndex : newIndex);
+      return <button key={i}
+                     style={{backgroundImage: `url(${elIsActive ? iconSelectionActive : iconSelectionEmpty})`}}
+                     onClick={() => this.move(i)}/>
+    });
+  };
+
   render() {
     const {defaultStyle} = this.state;
+
     return (
       <div className='WorksPage'>
 
@@ -120,16 +133,7 @@ export default class WorksPage extends React.Component {
           </Carousel>
         </div>
 
-        <div className='carousel-pagination'>
-          {Array.from({length: this.state.elementsList.length}, (_, i) => {
-            let lastElIndex = this.state.elementsList.length;
-            let newIndex = this.state.index % lastElIndex;
-
-            return <button key={i}
-                           style={{backgroundImage: `url(${i === (newIndex < 0 ? newIndex + lastElIndex : newIndex) ? iconSelectionActive : iconSelectionEmpty})`}}
-                           onClick={() => this.move(i)}/>
-          })}
-        </div>
+        <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
       </div>
     );
   }
