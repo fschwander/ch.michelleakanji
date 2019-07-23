@@ -79,21 +79,9 @@ export default class WorksPage extends React.Component {
     ]
   };
 
-  prev = () => {
-    let prevIndex = this.state.index - 1 === -1 ? this.state.elementsList.length - 1 : this.state.index - 1;
-    this.setState({index: prevIndex});
-  };
-
-  next = () => {
-    let nextIndex = (this.state.index + 1) % this.state.elementsList.length;
-    this.setState({index: nextIndex});
-  };
-
-  move = index => {
-    let newIndex = index % this.state.elementsList.length;
-    console.log(newIndex);
-    this.setState({newIndex});
-  };
+  prev = () => this.setState({index: this.state.index - 1});
+  next = () => this.setState({index: this.state.index + 1});
+  move = index => this.setState({index});
 
   getAllWorksTiles = () => {
     const {elementsList} = this.state;
@@ -113,14 +101,6 @@ export default class WorksPage extends React.Component {
 
         <div className='carousel-body' style={{...defaultStyle}}>
 
-          <div className='carousel-pagination'>
-            {Array.from({length: this.state.elementsList.length}, (_, i) => {
-              return <button key={i}
-                             style={{backgroundImage: `url(${i === this.state.index ? iconSelectionActive : iconSelectionEmpty})`}}
-                             onClick={() => this.move(i)}/>
-            })}
-          </div>
-
           <div className='carousel-nav-arrows'>
             <button className='arrow-left'
                     style={{backgroundImage: `url(${iconArrowLeft})`}}
@@ -138,6 +118,17 @@ export default class WorksPage extends React.Component {
                     onChange={index => this.move(index)}>
             {this.getAllWorksTiles()}
           </Carousel>
+        </div>
+
+        <div className='carousel-pagination'>
+          {Array.from({length: this.state.elementsList.length}, (_, i) => {
+            let lastElIndex = this.state.elementsList.length;
+            let newIndex = this.state.index % lastElIndex;
+
+            return <button key={i}
+                           style={{backgroundImage: `url(${i === (newIndex < 0 ? newIndex + lastElIndex : newIndex) ? iconSelectionActive : iconSelectionEmpty})`}}
+                           onClick={() => this.move(i)}/>
+          })}
         </div>
       </div>
     );
