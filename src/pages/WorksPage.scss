@@ -1,6 +1,7 @@
 .WorksPage {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   button {
@@ -15,18 +16,15 @@
   .carousel-pagination {
     display: flex;
     justify-content: center;
-    padding-bottom: 1em;
 
     button {
       margin: 0.1em;
-      width: 22px;
-      height: 22px;
+      width: 1.2em;
+      height: 1.2em;
     }
   }
 
   .carousel-body {
-    width: 100vw;
-
     .carousel-nav-arrows {
 
       button {

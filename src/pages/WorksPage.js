@@ -21,7 +21,6 @@ export default class WorksPage extends React.Component {
   state = {
     index: 0,
     effect: "3d",
-    direction: "horizontal",
     defaultStyle: {
       width: 400,
       height: 550,
@@ -125,7 +124,7 @@ export default class WorksPage extends React.Component {
           </div>
 
           <Carousel {...defaultStyle}
-                    direction={this.state.direction}
+                    direction="horizontal"
                     effect={this.state.effect}
                     index={this.state.index}
                     onChange={index => this.move(index)}>
