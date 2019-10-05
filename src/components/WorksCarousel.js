@@ -56,7 +56,7 @@ export default class WorksCarousel extends React.Component {
                     effect="3d"
                     index={this.state.index}
                     onChange={index => this.move(index)}>
-            {AllWorkTiles()}
+            {AllWorkTiles(this.state.index, AllWorkTiles().length)}
           </Carousel>
         </div>
 

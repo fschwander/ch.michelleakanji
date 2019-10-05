@@ -25,6 +25,18 @@
   }
 
   .carousel-body {
+    ._carousel-cell_zvdee_31 {
+      backface-visibility: visible !important;
+      opacity: 1;
+      //position: absolute;
+      //filter: blur(10px);
+
+      &.tileBehind {
+        background-color: deeppink;
+      }
+
+    }
+
     .carousel-nav-arrows {
 
       button {

@@ -9,7 +9,7 @@ import imgCriticalWhiteness from "../res/imgs/critical-whiteness.jpg";
 import imgSolange from "../res/imgs/solange.jpg";
 import imgNegritude from "../res/imgs/negritude.jpg";
 
-export default function AllWorkTiles() {
+export default function AllWorkTiles(activeIndex, nofElements) {
   const elementsList = [
     {
       title: 'Vaterland',
@@ -59,12 +59,19 @@ export default function AllWorkTiles() {
       image: imgNegritude,
       link: 'w-wie-negritude'
     }
-  ]
-  return elementsList.map((e, i) =>
-    <WorksTile title={e.title}
-               description={e.description}
-               key={i}
-               image={e.image}
-               link={e.link}/>
-  )
+  ];
+
+  return elementsList.map((e, i) => {
+    let className = (i === elementsList.length - 1) || i <= activeIndex + 1 ? 'inFront' : 'inBack';
+
+    return <WorksTile title={e.title}
+                      activeIndex={activeIndex}
+                      thisIndex={i}
+                      nofElements={nofElements}
+                      className={className}
+                      description={e.description}
+                      key={i}
+                      image={e.image}
+                      link={e.link}/>
+  })
 }
