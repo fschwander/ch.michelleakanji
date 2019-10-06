@@ -12,42 +12,53 @@
     }
   }
 
-  img {
-    width: 100%;
-    margin: 0.5em 0 0.5em;
-  }
-
   p {
     text-indent: 5em;
   }
 
-  .audio-player {
-    padding: 0.5em 0 1.5em;
-    transition: 0.1s linear;
+  .audioPlayerContainer {
+    position: relative;
 
-    &:hover {
-      transform: scale(1.04);
+    img {
+      width: 100%;
+      margin: 0.5em 0 0.5em;
     }
 
-    div {
-      display: flex;
-      justify-content: center;
+    .audio-player {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.5em 0 1.5em;
+      transition: 0.1s linear;
 
-      g {
-        &:nth-child(1) {
-          circle {
-            r: 260px;
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.04);
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+
+        g {
+          &:nth-child(1) {
+            circle {
+              r: 260px;
+            }
           }
-        }
-        &:nth-child(3) {
-          pointer-events: none;
-          circle {
+
+          &:nth-child(3) {
             pointer-events: none;
+
+            circle {
+              pointer-events: none;
+            }
           }
-        }
-        &:nth-child(5) {
-          circle, path {
-            fill: transparent;
+
+          &:nth-child(5) {
+            circle, path {
+              fill: transparent;
+            }
           }
         }
       }
