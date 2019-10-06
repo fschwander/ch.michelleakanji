@@ -1,8 +1,9 @@
 #Navigation {
-  background-color: $clr_white;
+  //background-color: $clr_white;
   position: sticky;
   border: unset;
   padding-top: 0.5em;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.6) 80%);
 
   .container {
     max-width: 740px;
