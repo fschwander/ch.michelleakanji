@@ -5,6 +5,7 @@ import React from "react";
 import AllWorkTiles from "./AllWorkTiles";
 import iconSelectionEmpty from "../res/icons/selection-empty.svg"
 import iconSelectionActive from "../res/icons/selection-active.svg"
+import './WorksCarousel.scss'
 
 export default class WorksCarousel extends React.Component {
 
@@ -38,7 +39,7 @@ export default class WorksCarousel extends React.Component {
     const {defaultStyle} = this.state;
 
     return (
-      <div>
+      <div className='WorksCarousel'>
         <div className='carousel-body' style={{...defaultStyle}}>
 
           <div className='carousel-nav-arrows'>

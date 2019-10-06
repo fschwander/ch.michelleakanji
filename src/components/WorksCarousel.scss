@@ -1,0 +1,27 @@
+.WorksCarousel {
+  .carousel-body {
+    ._carousel-cell_zvdee_31 {
+      backface-visibility: visible !important;
+      opacity: 1;
+    }
+
+    .carousel-nav-arrows {
+
+      button {
+        position: absolute;
+        top: 40%;
+        z-index: 1000;
+        height: 40px;
+        width: 40px;
+
+        &.arrow-left {
+          left: 5vw;
+        }
+
+        &.arrow-right {
+          right: 5vw;
+        }
+      }
+    }
+  }
+}
