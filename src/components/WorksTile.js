@@ -4,21 +4,12 @@ import {Link} from "react-router-dom";
 export default class WorksTile extends React.Component {
 
   render() {
-    const {thisIndex, nofElements, activeIndex} = this.props;
-
-    let lastElIndex = (activeIndex + nofElements - 1) % nofElements;
-    while (lastElIndex < 0) lastElIndex += nofElements;
-
-    let nextElIndex = (activeIndex + 1) % nofElements;
-    while (nextElIndex < 0) nextElIndex += nofElements;
-
-    let currentIndex = activeIndex % nofElements;
-    while(currentIndex <0) currentIndex += nofElements;
-
-    let className = lastElIndex === thisIndex || currentIndex === thisIndex || nextElIndex === thisIndex ? 'inFront' : 'inBack';
+    let cssClasses = this.elementIsOnIndex([-1, 0, 1]) ? 'inFront' : 'inBack';
+    if(this.elementIsOnIndex([-1])) cssClasses += ' gradientFilter leftFront';
+    if(this.elementIsOnIndex([1])) cssClasses += ' gradientFilter rightFront';
 
     return (
-      <div className={'WorksTile ' + className}>
+      <div className={'WorksTile ' + cssClasses}>
         <div className='container'>
           <Link to={this.props.link}>
             <div className='imageContainer'>
@@ -26,11 +17,25 @@ export default class WorksTile extends React.Component {
                    style={{backgroundImage: `url(${this.props.image})`}}>
               </div>
             </div>
-            <h2>{this.props.title}</h2>
-            <p className='no-intent'>{this.props.description}</p>
+            <div className='textContainer'>
+              <h2>{this.props.title}</h2>
+              <p className='no-intent'>{this.props.description}</p>
+            </div>
           </Link>
         </div>
       </div>
     )
+  }
+
+  elementIsOnIndex(arr) {
+    const {thisIndex, nofElements, activeIndex} = this.props;
+
+    for(let i = 0; i < arr.length; i++) {
+      let lastElIndex = (activeIndex + nofElements + arr[i]) % nofElements;
+      while (lastElIndex < 0) lastElIndex += nofElements;
+
+      if (lastElIndex === thisIndex) return true;
+    }
+    return false
   }
 }
