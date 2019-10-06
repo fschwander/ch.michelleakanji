@@ -16,13 +16,13 @@
     text-indent: 5em;
   }
 
+  img {
+    width: 100%;
+    margin: 0.5em 0 0.5em;
+  }
+
   .audioPlayerContainer {
     position: relative;
-
-    img {
-      width: 100%;
-      margin: 0.5em 0 0.5em;
-    }
 
     .audio-player {
       position: absolute;
