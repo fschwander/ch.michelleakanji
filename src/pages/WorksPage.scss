@@ -4,15 +4,6 @@
   align-items: center;
   flex-direction: column;
 
-  button {
-    background-size: 100%;
-    border: unset;
-
-    &:focus {
-      outline: 0;
-    }
-  }
-
   .carousel-pagination {
     display: flex;
     justify-content: center;
