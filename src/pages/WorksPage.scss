@@ -4,10 +4,17 @@
     display: flex;
     justify-content: center;
 
-    button {
-      margin: 0.1em;
-      width: 1.2em;
-      height: 1.2em;
+    .paginationButton {
+      width: 0.5em;
+      height: 0.5em;
+      margin: 0.4em;
+      padding: 0.25em;
+      border: 1px solid #222;
+      transition: 0.3s ease-in;
+
+      &.active {
+        transform: translateY(-0.2em) rotate(45deg);
+      }
     }
   }
 }

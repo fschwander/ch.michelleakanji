@@ -3,8 +3,6 @@ import iconArrowRight from "../res/icons/arrow-right.svg";
 import {Carousel} from "react-motion-components";
 import React from "react";
 import AllWorkTiles from "./AllWorkTiles";
-import iconSelectionEmpty from "../res/icons/selection-empty.svg"
-import iconSelectionActive from "../res/icons/selection-active.svg"
 import './WorksCarousel.scss'
 
 export default class WorksCarousel extends React.Component {
@@ -29,8 +27,10 @@ export default class WorksCarousel extends React.Component {
 
     return Array.from({length: nofElements}, (_, i) => {
       let elIsActive = i === (newIndex < 0 ? newIndex + nofElements : newIndex);
+      let className = 'paginationButton ' + (elIsActive ? 'active' : 'inactive');
       return <button key={i}
-                     style={{backgroundImage: `url(${elIsActive ? iconSelectionActive : iconSelectionEmpty})`}}
+                     className={className}
+                     // style={{backgroundImage: `url(${elIsActive ? iconSelectionActive : iconSelectionEmpty})`}}
                      onClick={() => this.move(i)}/>
     });
   };

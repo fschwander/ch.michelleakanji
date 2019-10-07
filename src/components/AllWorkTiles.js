@@ -54,7 +54,7 @@ export default function AllWorkTiles(activeIndex, nofElements) {
       link: 'solange'
     },
     {
-      title: 'W wie Négritude',
+      title: 'N wie Négritude',
       description: 'Fachartikel in der Publikation "Dada Afrika" für das Museum Rietberg',
       image: imgNegritude,
       link: 'w-wie-negritude'
