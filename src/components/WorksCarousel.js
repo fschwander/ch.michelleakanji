@@ -57,8 +57,6 @@ export default class WorksCarousel extends React.Component {
             {AllWorkTiles(this.state.index, AllWorkTiles().length)}
           </Carousel>
         </div>
-
-        <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
       </div>
     )
   }

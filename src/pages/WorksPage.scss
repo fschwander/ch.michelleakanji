@@ -1,37 +1,7 @@
 .WorksPage {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  @media screen and (max-height: 800px){
-    height: unset;
-    .carousel-pagination {
-      display: none;
-    }
-  }
-
-  .carousel-pagination {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-bottom: 5vh;
-
-    .paginationButton {
-      width: 0.5em;
-      height: 0.5em;
-      margin: 0.4em;
-      padding: 0.25em;
-      border: $line_width solid #222;
-      transition: 0.3s ease-in;
-
-      &.active {
-        transform: translateY(-0.2em) rotate(45deg);
-      }
-    }
-  }
 }
