@@ -1,15 +1,32 @@
 .WorksPage {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-height: 800px){
+    height: unset;
+    .carousel-pagination {
+      display: none;
+    }
+  }
 
   .carousel-pagination {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 5vh;
 
     .paginationButton {
       width: 0.5em;
       height: 0.5em;
       margin: 0.4em;
       padding: 0.25em;
-      border: 1px solid #222;
+      border: $line_width solid #222;
       transition: 0.3s ease-in;
 
       &.active {

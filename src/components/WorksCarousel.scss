@@ -1,4 +1,5 @@
 .WorksCarousel {
+
   .carousel-body {
     ._carousel-cell_zvdee_31 {
       backface-visibility: visible !important;
@@ -6,20 +7,33 @@
     }
 
     .carousel-nav-arrows {
-
       button {
         position: absolute;
         top: 40%;
         z-index: 1000;
-        height: 40px;
-        width: 40px;
+
+        border: solid black;
+        border-width: 0 $line_width $line_width 0;
+        display: inline-block;
+        padding: 12px;
+        transition: 0.1s ease-in-out;
 
         &.arrow-left {
-          left: 5vw;
+          transform: rotate(135deg);
+          left: 8vw;
+
+          &:active {
+            transform: translateX(-0.5em) rotate(135deg);
+          }
         }
 
         &.arrow-right {
-          right: 5vw;
+          transform: rotate(-45deg);
+          right: 8vw;
+
+          &:active {
+            transform: translateX(0.5em) rotate(-45deg);
+          }
         }
       }
     }
@@ -47,11 +61,11 @@
       }
 
       &.leftFront:after {
-        background: linear-gradient(to right, white 10%, rgba(255,255,255,0.001) 22%);
+        background: linear-gradient(to right, white 10%, rgba(255, 255, 255, 0.001) 22%);
       }
 
       &.rightFront:after {
-        background: linear-gradient(to left, white 10%, rgba(255,255,255,0.001) 22%);
+        background: linear-gradient(to left, white 10%, rgba(255, 255, 255, 0.001) 22%);
       }
     }
   }

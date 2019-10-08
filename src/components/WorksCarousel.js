@@ -1,9 +1,6 @@
-import iconArrowLeft from "../res/icons/arrow-left.svg";
-import iconArrowRight from "../res/icons/arrow-right.svg";
 import {Carousel} from "react-motion-components";
 import React from "react";
 import AllWorkTiles from "./AllWorkTiles";
-import './WorksCarousel.scss'
 
 export default class WorksCarousel extends React.Component {
 
@@ -44,11 +41,11 @@ export default class WorksCarousel extends React.Component {
 
           <div className='carousel-nav-arrows'>
             <button className='arrow-left'
-                    style={{backgroundImage: `url(${iconArrowLeft})`}}
+                    // style={{backgroundImage: `url(${iconArrowLeft})`}}
                     onClick={this.prev}/>
 
             <button className='arrow-right'
-                    style={{backgroundImage: `url(${iconArrowRight})`}}
+                    // style={{backgroundImage: `url(${iconArrowRight})`}}
                     onClick={this.next}/>
           </div>
 
