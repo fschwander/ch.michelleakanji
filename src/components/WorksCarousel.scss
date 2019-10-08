@@ -25,6 +25,10 @@
           &:active {
             transform: translateX(-0.5em) rotate(135deg);
           }
+
+          @media screen and (max-width: 600px){
+            left: 3vw;
+          }
         }
 
         &.arrow-right {
@@ -33,6 +37,10 @@
 
           &:active {
             transform: translateX(0.5em) rotate(-45deg);
+          }
+
+          @media screen and (max-width: 600px){
+            right: 3vw;
           }
         }
       }
