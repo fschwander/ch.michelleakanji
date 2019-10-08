@@ -38,13 +38,15 @@
     }
 
     .navbar-collapse {
+      position: absolute;
+      width: 100vw;
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
       padding-bottom: 1em;
 
       @media screen and (max-width: 767px) {
-        border-top: 2px solid $clr_black;
-        border-bottom: 2px solid $clr_black;
+        border-top: $line_width solid $clr_black;
+        border-bottom: $line_width solid $clr_black;
       }
     }
 
