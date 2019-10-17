@@ -43,6 +43,7 @@
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
       padding-bottom: 1em;
+      background-color: white;
 
       @media screen and (max-width: 767px) {
         border-top: $line_width solid $clr_black;

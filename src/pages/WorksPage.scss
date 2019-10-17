@@ -6,6 +6,11 @@
   flex-direction: column;
   overflow: hidden;
 
+  @media screen and (max-height: 700px){
+    min-height: 570px;
+    justify-content: flex-start;
+  }
+
   .carousel-pagination {
     display: none;
     justify-content: center;
