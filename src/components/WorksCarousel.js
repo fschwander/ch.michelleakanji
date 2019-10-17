@@ -41,11 +41,9 @@ export default class WorksCarousel extends React.Component {
 
           <div className='carousel-nav-arrows'>
             <button className='arrow-left'
-                    // style={{backgroundImage: `url(${iconArrowLeft})`}}
                     onClick={this.prev}/>
 
             <button className='arrow-right'
-                    // style={{backgroundImage: `url(${iconArrowRight})`}}
                     onClick={this.next}/>
           </div>
 
@@ -56,6 +54,9 @@ export default class WorksCarousel extends React.Component {
                     onChange={index => this.move(index)}>
             {AllWorkTiles(this.state.index, AllWorkTiles().length)}
           </Carousel>
+
+          <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
+
         </div>
       </div>
     )

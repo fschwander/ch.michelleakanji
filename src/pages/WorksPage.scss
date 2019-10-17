@@ -6,9 +6,36 @@
   flex-direction: column;
   overflow: hidden;
 
+  .carousel-pagination {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 5vh;
+
+    .paginationButton {
+      width: 0.5em;
+      height: 0.5em;
+      margin: 0.4em;
+      padding: 0.25em;
+      border: $line_width solid #222;
+      transition: 0.3s ease-in;
+
+      &.active {
+        transform: translateY(-0.2em) rotate(45deg);
+      }
+    }
+  }
+
   @media screen and (max-width: 600px){
     position: absolute;
     max-width: 100vw;
     left: 0;
+
+    .carousel-pagination {
+      display: flex;
+    }
   }
 }
