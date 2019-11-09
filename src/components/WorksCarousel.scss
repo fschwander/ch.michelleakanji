@@ -16,7 +16,7 @@
         display: inline-block;
         padding: 12px;
         transition: 0.1s ease-in-out;
-        background: linear-gradient(to bottom right, transparent, white);
+        background: linear-gradient(to bottom right, #ffffff01, white);
 
         &.arrow-left {
           transform: rotate(135deg);
@@ -69,11 +69,11 @@
       }
 
       &.leftFront:after {
-        background: linear-gradient(to right, white 10%, rgba(255, 255, 255, 0.001) 22%);
+        background: linear-gradient(to right, white 10%, #ffffff01 22%);
       }
 
       &.rightFront:after {
-        background: linear-gradient(to left, white 10%, rgba(255, 255, 255, 0.001) 22%);
+        background: linear-gradient(to left, white 10%, #ffffff01 22%);
       }
     }
   }

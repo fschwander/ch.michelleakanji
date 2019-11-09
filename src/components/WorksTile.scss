@@ -37,5 +37,15 @@
       margin: 0;
       line-height: 1.6em;
     }
+
+    @media screen and (max-height: 700px){
+      h2 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
   }
 }

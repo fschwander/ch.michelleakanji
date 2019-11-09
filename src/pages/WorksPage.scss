@@ -1,15 +1,10 @@
 .WorksPage {
-  height: 90vh;
+  height: calc(100vh - 72px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-
-  @media screen and (max-height: 700px){
-    min-height: 570px;
-    justify-content: flex-start;
-  }
 
   .carousel-pagination {
     display: none;
@@ -41,6 +36,17 @@
 
     .carousel-pagination {
       display: flex;
+    }
+  }
+
+  @media screen and (max-height: 700px){
+    justify-content: flex-start;
+    height: calc(100vh - 146px);
+
+    .carousel-pagination {
+      padding: 4vh 0 1vh;
+      width: 100vw;
+      background: linear-gradient(to top, #fffa 40%, #ffffff01);
     }
   }
 }

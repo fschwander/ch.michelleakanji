@@ -43,7 +43,7 @@ export default function AllWorkTiles(activeIndex, nofElements) {
     },
     {
       title: 'Critical Whiteness: Looking at one\'s self through the eyes of others',
-      description: 'Fachartikel in der Publikation "Im Welttheater" für das Zürcher Theater Spektakel',
+      description: 'Fachartikel in der Publikation "Im Welttheater" für das Theater Spektakel',
       image: imgCriticalWhiteness,
       link: 'critical-whiteness'
     },
