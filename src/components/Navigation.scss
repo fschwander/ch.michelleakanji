@@ -56,11 +56,12 @@
       .icon-bar {
         border-radius: 0;
         width: 28px;
+        height: $line_width;
         background-color: $clr_black;
         transition: ease-in-out 0.2s;
         transform-origin: left center;
         & + .icon-bar {
-          margin-top: 6px;
+          margin-top: 7px;
         }
       }
 

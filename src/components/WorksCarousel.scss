@@ -11,14 +11,23 @@
         position: absolute;
         top: 40%;
         z-index: 1000;
-        border: solid $clr_black;
-        border-width: 0 $line_width $line_width 0;
-        display: inline-block;
-        padding: 12px;
+        padding: 4px;
         transition: 0.1s ease-in-out;
-        background: linear-gradient(to bottom right, #ffffff01, white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        &.arrow-left {
+        @media screen and (max-height: 700px) {
+          top: 65%;
+        }
+
+        .arrow {
+          padding: 12px;
+          border: solid $clr_black;
+          border-width: 0 $line_width $line_width 0;
+        }
+
+        &.button-left {
           transform: rotate(135deg);
           left: 8vw;
 
@@ -31,7 +40,7 @@
           }
         }
 
-        &.arrow-right {
+        &.button-right {
           transform: rotate(-45deg);
           right: 8vw;
 

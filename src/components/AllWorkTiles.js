@@ -42,8 +42,8 @@ export default function AllWorkTiles(activeIndex, nofElements) {
       link: 'spuren-im-sand'
     },
     {
-      title: 'Critical Whiteness: Looking at one\'s self through the eyes of others',
-      description: 'Fachartikel in der Publikation "Im Welttheater" für das Theater Spektakel',
+      title: 'Critical Whiteness',
+      description: 'Fachartikel in der Publikation "Im Welttheater" für das Zürcher Theater Spektakel',
       image: imgCriticalWhiteness,
       link: 'critical-whiteness'
     },

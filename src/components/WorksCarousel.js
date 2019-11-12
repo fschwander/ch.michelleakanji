@@ -40,11 +40,15 @@ export default class WorksCarousel extends React.Component {
         <div className='carousel-body' style={{...defaultStyle}}>
 
           <div className='carousel-nav-arrows'>
-            <button className='arrow-left'
-                    onClick={this.prev}/>
+            <button className='button-left'
+                    onClick={this.prev}>
+              <span className='arrow'/>
+            </button>
 
-            <button className='arrow-right'
-                    onClick={this.next}/>
+            <button className='button-right'
+                    onClick={this.next}>
+              <span className='arrow'/>
+            </button>
           </div>
 
           <Carousel {...defaultStyle}
