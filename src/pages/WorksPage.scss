@@ -39,7 +39,7 @@
     }
   }
 
-  @media screen and (max-height: 700px) and (max-aspect-ratio: 2/3) {
+  @media screen and (max-aspect-ratio: 2/3) {
     justify-content: flex-start;
     height: calc(100vh - 146px);
 
