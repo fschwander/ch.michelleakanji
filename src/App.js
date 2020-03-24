@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Shared.scss';
 import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
-import {HashRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import Vaterland from "./works/Vaterland";
