@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/negritude.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 
 export default class Negritude extends React.Component {
@@ -12,6 +13,12 @@ export default class Negritude extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ N wie Négritude</title>
+          <meta name='description' content='Veröffentlicht in ZOLLFREILAGER'/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>N wie Négritude</h1>
 
         <p className='no-text-intent'>Veröffentlicht in&nbsp;

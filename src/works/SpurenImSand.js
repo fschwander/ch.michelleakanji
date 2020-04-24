@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/spuren-im-sand.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default class SpurenImSand extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -11,6 +12,12 @@ export default class SpurenImSand extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Spuren im Sand</title>
+          <meta property="og:image" content={img}/>
+          <meta name='description' content='Das Schicksal einer Fotoikone in Zeiten, in denen alles verschwimmt.'/>
+        </Helmet>
+
         <h1>Spuren im Sand</h1>
         <h2>Das Schicksal einer Fotoikone in Zeiten, in denen alles verschwimmt.</h2>
 

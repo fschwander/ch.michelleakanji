@@ -1,12 +1,20 @@
 import * as React from "react";
 import iconLinkedIn from '../res/icons/linked_in.svg'
 import { Image } from "react-bootstrap";
+import {Helmet} from "react-helmet/es/Helmet";
+import img from "../res/imgs/critical-whiteness.jpg";
 
 export default class ContactPage extends React.Component {
 
   render() {
     return (
       <div className='ContactPage'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Kontakt</title>
+          <meta name='description' content=''/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <div className='center-container'>
           <a className='link'
              href='mailto:kontakt@michelleakanji.ch'>

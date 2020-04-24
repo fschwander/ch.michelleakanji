@@ -14,12 +14,20 @@ import SpurenImSand from "./works/SpurenImSand";
 import CriticalWhiteness from "./works/CriticalWhiteness";
 import Solange from "./works/Solange";
 import Negritude from "./works/Negritude";
+import img from "./res/imgs/critical-whiteness.jpg";
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default function App({children}) {
 
   return (
     <Router>
       <div className="App">
+        <Helmet>
+          <title>Michelle Akanji</title>
+          <meta name='description' content='Reportagen, Features und Essays von Michelle Akanji, Kulturpublizistin in Zürich. '/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <Navigation/>
         <Layout children={children}>
 

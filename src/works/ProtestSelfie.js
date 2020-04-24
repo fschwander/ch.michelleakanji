@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/protest-selfie.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default class ProtestSelfie extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -11,6 +12,13 @@ export default class ProtestSelfie extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Protest-Selfie</title>
+          <meta name='description' content='Zwischen Selbstdarstellung und Protest-Identität. Text erschienen in: Protest. Eine Zukunftspraxis. Zürcher Hochschule der Künste
+          (ZHdK) / Basil Rogger, Jonas Voegeli, Ruedi Widmer, Museum für Gestaltung Zürich (Hg.) Lars Müller Publishers, 2018.'/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>Protest-Selfie</h1>
         <h2>Zwischen Selbstdarstellung und Protest-Identität</h2>
 

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/critical-whiteness.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 
 export default class CriticalWhiteness extends React.Component {
@@ -12,6 +13,12 @@ export default class CriticalWhiteness extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Critical Whiteness</title>
+          <meta name='description' content="Looking at one's self through the eyes of others"/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>Critical Whiteness</h1>
         <h2>Looking at one's self through the eyes of others</h2>
 

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/solange.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default class Solange extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -11,6 +12,12 @@ export default class Solange extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Solange - A Seat at the Table</title>
+          <meta name='description' content='Erschienen in GDS.FM'/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>Solange - A Seat at the Table</h1>
         <p className='no-text-intent'>
           Text erschienen in&nbsp;

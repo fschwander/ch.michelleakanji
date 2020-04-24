@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image } from "react-bootstrap";
 import img from '../res/imgs/hardau.jpg'
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default class SchlimmstenfallsEineUtopie extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -11,6 +12,13 @@ export default class SchlimmstenfallsEineUtopie extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Schlimmstenfalls eine Utopie</title>
+          <meta property="og:image" content={img}/>
+          <meta name='description' content='Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in
+          der Zürcher Hardau.'/>
+        </Helmet>
+
         <h1>Schlimmstenfalls eine Utopie</h1>
         <h2>Was macht den Charakter einer Siedlung aus? Und wer sorgt dafür, dass dieser bestehen bleibt? Unterwegs in
           der Zürcher Hardau.</h2>

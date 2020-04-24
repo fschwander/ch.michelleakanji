@@ -1,4 +1,6 @@
 import * as React from "react";
+import {Helmet} from "react-helmet/es/Helmet";
+import img from "../res/imgs/critical-whiteness.jpg";
 
 export default class DerWertDerWahrheit extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -9,6 +11,13 @@ export default class DerWertDerWahrheit extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Der Wert der Wahrheit</title>
+          <meta name='description' content='Transparenz ist ein Marketinginstrument – wie macht ein von Aktivisten gemachter Dokumentarfilm über ihr
+          eigenes Projekt seinen Wirklichkeitsfilter transparent?'/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>Der Wert der Wahrheit</h1>
         <h2>Transparenz ist ein Marketinginstrument – wie macht ein von Aktivisten gemachter Dokumentarfilm über ihr
           eigenes Projekt seinen Wirklichkeitsfilter transparent?</h2>

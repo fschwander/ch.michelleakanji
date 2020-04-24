@@ -1,6 +1,7 @@
 import * as React from "react";
 import img from '../res/imgs/heimat.jpg'
 import { Image } from "react-bootstrap";
+import {Helmet} from "react-helmet/es/Helmet";
 
 export default class HeimatSchreiben extends React.Component {
   //todo: remove me after fixing scroll to wrong position
@@ -11,6 +12,13 @@ export default class HeimatSchreiben extends React.Component {
   render() {
     return (
       <div className='Works'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Heimat schreiben</title>
+          <meta name='description' content='Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind –
+          wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben.'/>
+          <meta property="og:image" content={img}/>
+        </Helmet>
+
         <h1>Heimat schreiben</h1>
         <h2>Die Schweiz ist nicht mein einziges Zuhause. Wenn die Heimat und Geschichten ein untrennbares Paar sind –
           wohin gehöre ich als Autorin? Ein Plädoyer für oder gegen afropolitisches Schreiben.</h2>
