@@ -16,6 +16,7 @@ import Solange from "./works/Solange";
 import Negritude from "./works/Negritude";
 import img from "./res/imgs/critical-whiteness.jpg";
 import {Helmet} from "react-helmet/es/Helmet";
+import Article from "./components/Article";
 
 export default function App({children}) {
 
@@ -34,6 +35,8 @@ export default function App({children}) {
           <Switch>
             <Route path='/works' component={WorksPage}/>
             <Route path='/contact' component={ContactPage}/>
+
+            const Vaterland = <Article><Vaterland/></Article>
 
             <Route path='/vaterland' component={Vaterland}/>
             <Route path='/der-wert-der-wahrheit' component={DerWertDerWahrheit}/>

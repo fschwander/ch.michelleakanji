@@ -1,17 +1,12 @@
 import * as React from "react";
+import './Vaterland.scss';
 import audioFile from '../res/audio/vaterland.mp3';
 import PlayAudio from 'react-simple-audio-player'
 import chroma from "chroma-js";
 import {Image} from "react-bootstrap";
 import img from '../res/imgs/vaterland.jpg'
-import {Helmet} from "react-helmet/es/Helmet";
-
 
 export default class Vaterland extends React.Component {
-  //todo: remove me after fixing scroll to wrong position
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
 
   render() {
     const colorScale = chroma
@@ -23,14 +18,7 @@ export default class Vaterland extends React.Component {
       .colors(5)
 
     return (
-      <div className='Works'>
-        <Helmet>
-          <title>Michelle Akanji ∆ Vaterland</title>
-          <meta property="og:image" content={img}/>
-          <meta name='description'
-                content='Vaterland ist ein 45-minütiges Audiofeature. Erschienen der REPUBLIK und in Passage des Schweizer Radio und Fernsehen SRF'/>
-        </Helmet>
-
+      <div className='Vaterland'>
         <h1>Vaterland</h1>
 
         <p className='no-text-intent'>Ausgezeichnet mit dem Jurypreis und dem Publikumspreis am 9.&nbsp;
