@@ -1,5 +1,4 @@
 import * as React from "react";
-import img from "../res/imgs/vaterland.jpg";
 import {Helmet} from "react-helmet/es/Helmet";
 import './Article.scss';
 
@@ -10,16 +9,17 @@ export default class Article extends React.Component {
   }
 
   render() {
+    const ArticleContent = this.props.compontent;
+
     return(
       <div className={'Article'}>
         <Helmet>
-          <title>Michelle Akanji ∆ Vaterland</title>
-          <meta property="og:image" content={img}/>
-          <meta name='description'
-                content='Vaterland ist ein 45-minütiges Audiofeature. Erschienen der REPUBLIK und in Passage des Schweizer Radio und Fernsehen SRF'/>
+          <title>Michelle Akanji ∆ {this.props.title}</title>
+          <meta property="og:image" content={this.props.img}/>
+          <meta name='description' content={this.props.description}/>
         </Helmet>
 
-        {this.props.children}
+        <ArticleContent/>
 
       </div>
     )
