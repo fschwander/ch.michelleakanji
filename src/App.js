@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
 import './styles/Shared.scss';
-import Navigation from "./components/Navigation";
-import Layout from "./components/Layout";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
@@ -17,6 +15,8 @@ import Solange from "./works/Solange";
 import Negritude from "./works/Negritude";
 import img from "./res/imgs/critical-whiteness.jpg";
 import {Helmet} from "react-helmet/es/Helmet";
+import {Navigation} from "./components/Navigation";
+import {Layout} from "./components/Layout";
 
 export default function App({children}) {
 

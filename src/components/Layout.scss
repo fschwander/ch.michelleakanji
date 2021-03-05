@@ -1,4 +1,8 @@
 .Layout {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+
+  @media screen and (max-height: 800px){
+     align-items: flex-end;
+  }
 }

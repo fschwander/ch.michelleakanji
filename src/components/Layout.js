@@ -1,13 +1,25 @@
 import * as React from "react";
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
+import {useEffect, useState} from "react";
 
-export default class Layout extends React.Component{
+export const Layout = ({children}) => {
+  const [windowHeight, setWindowHeight] = useState();
 
-  render() {
-    return (
-      <div className='Layout' style={{height: `${window.innerHeight}px`}}>
-        <Container>{ this.props.children }</Container>
-      </div>
-    )
+  const handleResize = () => {
+    console.log(windowHeight);
+    setWindowHeight(window.innerHeight);
   }
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  })
+
+  return (
+    <div className='Layout' style={{height: `${windowHeight}px`}}>
+      <Container>{children}</Container>
+    </div>
+  )
 }
