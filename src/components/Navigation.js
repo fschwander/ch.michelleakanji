@@ -1,48 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import {Nav, Navbar} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap'
 
 export default class Navigation extends React.Component {
 
   render() {
     return (
-      <Navbar id="Navigation" collapseOnSelect fixedTop>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link to={ '/works' }>
-              <h1>Michelle Akanji</h1>
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle/>
-        </Navbar.Header>
+      <Navbar id="Navigation" expand='sm'>
+        <Navbar.Brand href={'/works'}>Michelle Akanji</Navbar.Brand>
+        <Navbar.Toggle className='navbar-toggle'>
+          <span className='icon-bar'/>
+          <span className='icon-bar'/>
+          <span className='icon-bar'/>
+        </Navbar.Toggle>
         <Navbar.Collapse>
-          <Nav pullRight>
-            <LinkContainer to={ '/works' }>
-              <NavItem eventKey={ 0 }>Arbeiten</NavItem>
-            </LinkContainer>
-            <LinkContainer to={ '/contact' }>
-              <NavItem eventKey={ 1 }>Kontakt</NavItem>
-            </LinkContainer>
+          <Nav>
+            <LinkContainer to={'/works'}><Nav.Link>Arbeiten</Nav.Link></LinkContainer>
+            <LinkContainer to={'/contact'}><Nav.Link>Kontakt</Nav.Link></LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     );
-  }
-
-  componentDidMount() {
-    this.addWindowScrolledListener();
-  }
-
-  addWindowScrolledListener() {
-    window.addEventListener('scroll', () => {
-      let startHeight = 50;
-
-      if (document.body.scrollTop > startHeight || document.documentElement.scrollTop > startHeight) {
-        document.getElementById('Navigation').classList.add('scrolled');
-      } else {
-        document.getElementById('Navigation').classList.remove('scrolled');
-      }
-    });
   }
 }

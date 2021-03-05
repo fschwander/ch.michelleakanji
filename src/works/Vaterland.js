@@ -5,6 +5,7 @@ import PlayAudio from 'react-simple-audio-player'
 import chroma from "chroma-js";
 import {Image} from "react-bootstrap";
 import img from '../res/imgs/vaterland.jpg'
+import {Helmet} from "react-helmet";
 
 export default class Vaterland extends React.Component {
 
@@ -18,7 +19,13 @@ export default class Vaterland extends React.Component {
       .colors(5)
 
     return (
-      <div className='Vaterland'>
+      <div className='Works Vaterland'>
+        <Helmet>
+          <title>Michelle Akanji ∆ Vaterland</title>
+          <meta property="og:image" content={img}/>
+          <meta name='description' content='Vaterland ist ein 45-minütiges Audiofeature. Erschienen der REPUBLIK und in Passage des Schweizer Radio und Fernsehen SRF.'/>
+        </Helmet>
+
         <h1>Vaterland</h1>
 
         <p className='no-text-intent'>Ausgezeichnet mit dem Jurypreis und dem Publikumspreis am 9.&nbsp;

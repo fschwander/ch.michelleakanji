@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.scss';
 import './styles/Shared.scss';
 import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
@@ -16,19 +17,8 @@ import Solange from "./works/Solange";
 import Negritude from "./works/Negritude";
 import img from "./res/imgs/critical-whiteness.jpg";
 import {Helmet} from "react-helmet/es/Helmet";
-import Article from "./components/Article";
 
 export default function App({children}) {
-
-  const articles = [
-    {
-      title: 'Vaterland',
-      description: 'Vaterland ist ein 45-minütiges Audiofeature. Erschienen der REPUBLIK und in Passage des Schweizer Radio und Fernsehen SRF',
-      img: img,
-      path: '',
-      component: Vaterland
-    }
-  ]
 
   return (
     <Router>
@@ -47,15 +37,7 @@ export default function App({children}) {
             <Route path='/works' component={WorksPage}/>
             <Route path='/contact' component={ContactPage}/>
 
-            {
-              articles.map(el => {
-                const content = () => <Article compontent={el.component}
-                                               title={el.title}
-                                               description={el.description}/>
-                return <Route path={el.path} component={content} key={el.title}/>
-              })
-            }
-
+            <Route path='/vaterland' component={Vaterland}/>
             <Route path='/der-wert-der-wahrheit' component={DerWertDerWahrheit}/>
             <Route path='/heimat-schreiben' component={HeimatSchreiben}/>
             <Route path='/protest-selfie' component={ProtestSelfie}/>

@@ -1,68 +1,68 @@
 @import "Variables";
 // pages
-@import "../pages/ContactPage";
+@import "src/pages/ContactPage";
 // components
-@import "../components/Layout";
-@import "../components/Navigation";
-@import "../components/WorksTile";
-@import "../components/WorksCarousel";
+@import "src/components/Layout";
+@import "src/components/Navigation";
+@import "src/components/WorksTile";
+@import "src/components/WorksCarousel";
+@import "src/works/Works";
 
-@import "../pages/WorksPage";
-@import "../works/Vaterland";
+@import "src/pages/WorksPage";
+@import "src/works/Vaterland";
 
-.App {
-  * {
-    font-family: Avenir, Helvetica, Futura, Tahoma, sans-serif;
-    color: $clr_black;
-    font-size: 16px;
+* {
+  font-family: Avenir, Helvetica, Futura, Tahoma, sans-serif;
+  color: $clr_black;
+  font-size: 16px;
+}
+
+h1, .navbar-brand {
+  font-weight: bold;
+  font-size: 5vmax;
+  text-align: justify;
+  margin: 0 0 1em;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 3em;
+  line-height: 1.1em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: $clr_black;
+  text-decoration: underline;
+}
+
+button {
+  background-size: 100%;
+  background-color: transparent;
+  border: unset;
+
+  &:focus {
+    outline: 0;
   }
+}
 
-  h1 {
-    font-weight: bold;
-    font-size: 5vmax;
-    text-align: justify;
-    margin: 0 0 1em;
-  }
+svg {
+  stroke-width: 15px;
+}
 
-  h2 {
-    font-size: 1em;
-    margin-bottom: 3em;
-    line-height: 1.1em;
-  }
+.no-text-intent {
+  text-indent: unset !important;
+}
 
-  h3 {
-    font-size: 1.1em;
-  }
-
-  p {
-    line-height: 1.8;
-    margin-bottom: 1.5em;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  button {
-    background-size: 100%;
-    background-color: transparent;
-    border: unset;
-
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  svg {
-    stroke-width: 15px;
-  }
-
-  .no-text-intent {
-    text-indent: unset;
-  }
-
-  .horizontal-container {
-    display: flex;
-    flex-direction: row;
-  }
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
 }

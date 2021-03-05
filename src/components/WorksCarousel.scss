@@ -1,4 +1,6 @@
 .WorksCarousel {
+  display: flex;
+  flex-direction: column;
 
   .carousel-body {
     ._carousel-cell_zvdee_31 {
@@ -25,6 +27,7 @@
           padding: 12px;
           border: solid $clr_black;
           border-width: 0 $line_width $line_width 0;
+          box-shadow: 2px 2px 4px -2px $clr_white;
         }
 
         &.button-left {

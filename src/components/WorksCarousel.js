@@ -27,7 +27,6 @@ export default class WorksCarousel extends React.Component {
       let className = 'paginationButton ' + (elIsActive ? 'active' : 'inactive');
       return <button key={i}
                      className={className}
-                     // style={{backgroundImage: `url(${elIsActive ? iconSelectionActive : iconSelectionEmpty})`}}
                      onClick={() => this.move(i)}/>
     });
   };
@@ -36,7 +35,7 @@ export default class WorksCarousel extends React.Component {
     const {defaultStyle} = this.state;
 
     return (
-      <div className='WorksCarousel'>
+      <div className='WorksCarousel' style={{height: `${window.innerHeight - 70}px`}}>
         <div className='carousel-body' style={{...defaultStyle}}>
 
           <div className='carousel-nav-arrows'>
@@ -58,10 +57,9 @@ export default class WorksCarousel extends React.Component {
                     onChange={index => this.move(index)}>
             {AllWorkTiles(this.state.index, AllWorkTiles().length)}
           </Carousel>
-
-          <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
-
         </div>
+        <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
+
       </div>
     )
   }
