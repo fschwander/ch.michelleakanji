@@ -1,5 +1,5 @@
 import React from "react";
-import WorksCarousel from "../components/WorksCarousel";
+import {WorksCarousel} from "../components/WorksCarousel";
 import {Helmet} from "react-helmet/es/Helmet";
 import img from "../res/imgs/critical-whiteness.jpg";
 

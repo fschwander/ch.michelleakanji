@@ -1,66 +1,58 @@
 import {Carousel} from "react-motion-components";
-import React from "react";
+import {useState} from "react";
 import AllWorkTiles from "./AllWorkTiles";
 
-export default class WorksCarousel extends React.Component {
+export const WorksCarousel = () => {
+  const [index, setIndex] = useState(0);
+  const defaultStyle = {
+    width: 400,
+    height: 500,
+    margin: 'auto'
+  }
 
-  state = {
-    defaultStyle: {
-      width: 400,
-      height: 550,
-      margin: "auto"
-    },
-    index: 0
-  };
+  const prev = () => setIndex(index - 1);
+  const next = () => setIndex(index + 1);
+  const move = i => setIndex(i);
 
-  prev = () => this.setState({index: this.state.index - 1});
-  next = () => this.setState({index: this.state.index + 1});
-  move = index => this.setState({index});
-
-  getPaginationButtons = () => {
+  const getPaginationButtons = () => {
     let nofElements = AllWorkTiles().length;
-
-    let newIndex = this.state.index % nofElements;
+    let newIndex = index % nofElements;
 
     return Array.from({length: nofElements}, (_, i) => {
       let elIsActive = i === (newIndex < 0 ? newIndex + nofElements : newIndex);
       let className = 'paginationButton ' + (elIsActive ? 'active' : 'inactive');
       return <button key={i}
                      className={className}
-                     onClick={() => this.move(i)}/>
+                     onClick={() => move(i)}/>
     });
   };
 
-  render() {
-    const {defaultStyle} = this.state;
+  return (
+    <div className='WorksCarousel' style={{height: `${window.innerHeight - 70}px`}}>
+      <div className='carousel-body' style={{...defaultStyle}}>
 
-    return (
-      <div className='WorksCarousel' style={{height: `${window.innerHeight - 70}px`}}>
-        <div className='carousel-body' style={{...defaultStyle}}>
+        <div className='carousel-nav-arrows'>
+          <button className='button-left'
+                  onClick={prev}>
+            <span className='arrow'/>
+          </button>
 
-          <div className='carousel-nav-arrows'>
-            <button className='button-left'
-                    onClick={this.prev}>
-              <span className='arrow'/>
-            </button>
-
-            <button className='button-right'
-                    onClick={this.next}>
-              <span className='arrow'/>
-            </button>
-          </div>
-
-          <Carousel {...defaultStyle}
-                    direction="horizontal"
-                    effect="3d"
-                    index={this.state.index}
-                    onChange={index => this.move(index)}>
-            {AllWorkTiles(this.state.index, AllWorkTiles().length)}
-          </Carousel>
+          <button className='button-right'
+                  onClick={next}>
+            <span className='arrow'/>
+          </button>
         </div>
-        <div className='carousel-pagination'>{this.getPaginationButtons()}</div>
 
+        <Carousel {...defaultStyle}
+                  direction="horizontal"
+                  effect="3d"
+                  index={index}
+                  onChange={index => move(index)}>
+          {AllWorkTiles(index, AllWorkTiles().length)}
+        </Carousel>
       </div>
-    )
-  }
+      <div className='carousel-pagination'>{getPaginationButtons()}</div>
+
+    </div>
+  )
 }
