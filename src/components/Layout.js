@@ -3,17 +3,14 @@ import {Container} from "react-bootstrap";
 import {useEffect, useState} from "react";
 
 export const Layout = ({children}) => {
-  const [windowHeight, setWindowHeight] = useState();
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const handleResize = () => {
-    console.log(windowHeight);
     setWindowHeight(window.innerHeight);
   }
 
   useEffect(() => {
-    handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   })
 

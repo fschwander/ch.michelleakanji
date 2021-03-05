@@ -4,6 +4,7 @@ import AllWorkTiles from "./AllWorkTiles";
 
 export const WorksCarousel = () => {
   const [index, setIndex] = useState(0);
+  const [carouselHeight, setCarouselHeight] = useState(window.innerHeight - 70);
   const defaultStyle = {
     width: 400,
     height: 500,
@@ -27,8 +28,18 @@ export const WorksCarousel = () => {
     });
   };
 
+  const handleResize = () => {
+    setCarouselHeight(window.innerHeight - 70);
+  }
+
+  useState(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  })
+
   return (
-    <div className='WorksCarousel' style={{height: `${window.innerHeight - 70}px`}}>
+    <div className='WorksCarousel' style={{height: `${carouselHeight}px`}}>
       <div className='carousel-body' style={{...defaultStyle}}>
 
         <div className='carousel-nav-arrows'>
