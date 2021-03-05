@@ -2,16 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 
   @media screen and (max-height: 800px){
     align-items: flex-end;
   }
 
   .carousel-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     background: linear-gradient(to top, #fffa 40%, #ffffff01);
 
     .paginationButton {
