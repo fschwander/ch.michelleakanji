@@ -1,7 +1,12 @@
 .WorksPage {
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
+
+  @media screen and (max-height: 800px){
+    align-items: flex-end;
+  }
 
   .carousel-pagination {
     display: flex;

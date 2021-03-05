@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import './styles/Shared.scss';
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
-import WorksPage from "./pages/WorksPage";
+import {WorksPage} from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import Vaterland from "./works/Vaterland";
 import HeimatSchreiben from "./works/HeimatSchreiben";
