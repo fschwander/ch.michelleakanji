@@ -18,7 +18,15 @@ import {Helmet} from "react-helmet/es/Helmet";
 import {Navigation} from "./components/Navigation";
 import {Layout} from "./components/Layout";
 
+const CarouselIndex = React.createContext(0);
+
+
 export default function App({children}) {
+
+  console.log(CarouselIndex);
+
+  CarouselIndex._currentValue = 2;
+  console.log(CarouselIndex);
 
   return (
     <Router>
@@ -31,26 +39,29 @@ export default function App({children}) {
         </Helmet>
 
         <Navigation/>
-        <Layout children={children}>
 
-          <Switch>
-            <Route path='/works' component={WorksPage}/>
-            <Route path='/contact' component={ContactPage}/>
+        <CarouselIndex.Provider value={1}>
+          <Layout children={children}>
 
-            <Route path='/vaterland' component={Vaterland}/>
-            <Route path='/der-wert-der-wahrheit' component={DerWertDerWahrheit}/>
-            <Route path='/heimat-schreiben' component={HeimatSchreiben}/>
-            <Route path='/protest-selfie' component={ProtestSelfie}/>
-            <Route path='/schlimmstenfalls-eine-utopie' component={SchlimmstenfallsEineUtopie}/>
-            <Route path='/spuren-im-sand' component={SpurenImSand}/>
-            <Route path='/critical-whiteness' component={CriticalWhiteness}/>
-            <Route path='/solange' component={Solange}/>
-            <Route path='/w-wie-negritude' component={Negritude}/>
+            <Switch>
+              <Route path='/works' component={WorksPage}/>
+              <Route path='/contact' component={ContactPage}/>
 
-            <Redirect from='/' to='/works'/>
-          </Switch>
+              <Route path='/vaterland' component={Vaterland}/>
+              <Route path='/der-wert-der-wahrheit' component={DerWertDerWahrheit}/>
+              <Route path='/heimat-schreiben' component={HeimatSchreiben}/>
+              <Route path='/protest-selfie' component={ProtestSelfie}/>
+              <Route path='/schlimmstenfalls-eine-utopie' component={SchlimmstenfallsEineUtopie}/>
+              <Route path='/spuren-im-sand' component={SpurenImSand}/>
+              <Route path='/critical-whiteness' component={CriticalWhiteness}/>
+              <Route path='/solange' component={Solange}/>
+              <Route path='/w-wie-negritude' component={Negritude}/>
 
-        </Layout>
+              <Redirect from='/' to='/works'/>
+            </Switch>
+
+          </Layout>
+        </CarouselIndex.Provider>
       </div>
     </Router>
   );

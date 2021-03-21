@@ -1,23 +1,34 @@
 import {Carousel} from "react-motion-components";
 import {useState} from "react";
 import AllWorkTiles from "./AllWorkTiles";
+import {State} from '../services/State';
 
 export const WorksCarousel = () => {
-  const [index, setIndex] = useState(0);
   const [carouselHeight, setCarouselHeight] = useState(window.innerHeight - 70);
+  const [, forceUpdate] = useState();
+
   const defaultStyle = {
     width: 400,
     height: 500,
     margin: 'auto'
   }
 
-  const prev = () => setIndex(index - 1);
-  const next = () => setIndex(index + 1);
-  const move = i => setIndex(i);
+  const prev = () => {
+    State.setIndex(State.index - 1);
+    forceUpdate(Math.random());
+  }
+  const next = () => {
+    State.setIndex(State.index + 1);
+    forceUpdate(Math.random());
+  }
+  const move = i => {
+    State.setIndex(i);
+    forceUpdate(Math.random());
+  }
 
   const getPaginationButtons = () => {
     let nofElements = AllWorkTiles().length;
-    let newIndex = index % nofElements;
+    let newIndex = State.index % nofElements;
 
     return Array.from({length: nofElements}, (_, i) => {
       let elIsActive = i === (newIndex < 0 ? newIndex + nofElements : newIndex);
@@ -57,9 +68,9 @@ export const WorksCarousel = () => {
         <Carousel {...defaultStyle}
                   direction="horizontal"
                   effect="3d"
-                  index={index}
+                  index={State.index}
                   onChange={index => move(index)}>
-          {AllWorkTiles(index, AllWorkTiles().length)}
+          {AllWorkTiles(State.index, AllWorkTiles().length)}
         </Carousel>
       </div>
       <div className='carousel-pagination'>{getPaginationButtons()}</div>
