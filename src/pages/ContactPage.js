@@ -11,7 +11,7 @@ export default class ContactPage extends React.Component {
       <div className='ContactPage'>
         <Helmet>
           <title>Michelle Akanji ∆ Kontakt</title>
-          <meta name='description' content=''/>
+          <meta name='description' content='Reportagen, Features und Essays von Michelle Akanji, Kulturpublizistin in Zürich. '/>
           <meta property="og:image" content={img}/>
         </Helmet>
 
