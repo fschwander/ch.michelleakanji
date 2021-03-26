@@ -1,5 +1,4 @@
 import * as React from "react";
-import './Vaterland.scss';
 import audioFile from '../res/audio/vaterland.mp3';
 import PlayAudio from 'react-simple-audio-player'
 import chroma from "chroma-js";
